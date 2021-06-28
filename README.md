@@ -1,21 +1,21 @@
+<!-- CODENAME: BANANA -->
 # Jadu Finances
 
 
 
 ## Project Description
 
-Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to the current nature of the business, finances are tracked on a batch basis (which roughly correlate to months). On the summary/landing page the business owner is able to see a summary of their sales, expenses and net profit for the selected batch, as well as total sales/expenses over time (PMVP). The sales page will display the current batch's sales divided into categories and they are able to add sales. The expenses page will display the selected batch's expenses divided into categories and they are able to add expenses. 
+Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to the current nature of the business, finances are tracked on a batch basis (which roughly correlate to months). On the summary/landing page the business owner is able to see a summary of their sales, expenses and net profit for the selected batch, as well as total sales/expenses over time (PMVP). The sales page will display the current batch's sales divided into categories and they are able to add sales entries. The expenses page will display the selected batch's expenses divided into categories and they are able to add expenses. 
 
 ## Wireframes
-////////////////
 
-The wireframes below depict the homepage and review feed for What-cha-Think in web, tablet and phone format. The homepage contains a header displaying the app title and three clickable icons - movies, television and sports - that route to each respective review feed. The review feeds contain an input form and submit button for review data. Below the form is a feed of all past forms, along with a delete button for each post. The screens will center as screen size decreases.
 
-![imageAlt](https://i.imgur.com/IX2UVl9.png)
+
+![imageAlt]()
 
 ## Component Hierarchy
 
-![imageAlt](https://i.imgur.com/PhRA82l.png)
+![imageAlt]()
 
 ## API and Data Sample
 
@@ -107,77 +107,85 @@ May_Expenses Airtable Sample
 1. Financial Calculations
 2. Donut Chart
 3. Entries Table
-4. Add expense/sale button
-5. Form
-6. Category/Product Input: Dropdown Menu
-7. Nav Bar
-8. Details (Expenses, Sales)
-9. Summary
-10. Select Batch Dropdown Menu
+4. Nav Bar
+5. Details (Expenses, Sales)
+6. Summary
+7. Select Batch Dropdown Menu
+8. Add expense/sale button
+9. Form
+10. Category/Product Input: Dropdown Menu
 
 
 #### PostMVP
 
-- Login Form
 - Allow editing/deleting posts (via mouse-over icon change to edit and additional delete button on the Form component)
 - Populate Select Batch Dropdown Menu with additional batches and allow Add Batch option
 - Select Batch Dropdown Menu renders appropriate batch's summary, expense and sales details
 - Sales / Expenses over time on summary page
-- Ability to add categories on Form and render financial calculations and donut summary appropriately
 - Group ingredient expenses together on Donut Chart
 - Highlight Donut Chart category on calculation hover (and vice-versa)
 - On Donut/Calculation category click, filter Details Table to show only entries in that category
+- Ability to add categories on Form and render financial calculations and donut summary appropriately ???
 
 
 ## Project Schedule
 
-| Day      | Deliverable                                | Status   |
-| -------- | ------------------------------------------ | -------- |
-| Oct 9-11 | Proposal Approval / Airtable Setup         | Complete |
-| Oct 12   | Component Creation / Get, Set, Delete Data | Complete |
-| Oct 13   | Oct. 12 cont'd / CSS Components            | Complete |
-| Oct 14   | CSS Components cont'd / MVP                | Complete |
-| Oct 15   | Advanced CSS                               | Complete |
-| Oct 16   | Presentations                              | Complete |
+| Day    | Deliverable                                                  | Status      |
+| ------ | ------------------------------------------------------------ | ----------- |
+| Jun 29 | Proposal Approval, Airtable Setup, Donut Chart Setup         | Pending     |
+| Jun 30 | Link/Route Skeleton, Component Creation, Successful API GET  | Not Started |
+| Jul 1  | Render Components, Successful API POST                       | Not Started |
+| Jul 2  | Deploy, CSS, Media Query                                     | Not Started |
+| Jul 6  | Advanced CSS (Transitions, onHover effects), Filter Table    | Not Started |
+| Jul 7  | Presentations                                                | Not Started |
 
 ## Timeframes
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Airtable setup            |    H     |     .5hrs      |      1hr      |     1hr     |
-| Clickable icons           |    H     |      1hrs      |      1hr      |     1hr     |
-| Data population pg 1      |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Data population pg 2      |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Data population pg 3      |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Form creation pg 1        |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Form creation pg 2        |    H     |      2hrs      |     1 hr      |    1 hr     |
-| Form creation pg 3        |    H     |      2hrs      |     1 hr      |     1hr     |
-| Data creation/update pg 1 |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Data creation/update pg 2 |    H     |      3hrs      |      1hr      |     1hr     |
-| Data creation/update pg 3 |    H     |      3hrs      |      1hr      |     1hr     |
-| Data deletion pg 1        |    H     |      2hrs      |      1hr      |     1hr     |
-| Data deletion pg 2        |    H     |      2hrs      |      1hr      |     1hr     |
-| Data deletion pg 3        |    H     |      2hrs      |      1hr      |     1hr     |
-| Component CSS pg 1        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Component CSS pg 2        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Component CSS pg 3        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Total                     |    H     |    42.5hrs     |     35hrs     |    35hrs    |
+| Proposal                  |    H     |      3hrs      |     2hrs      |    hrs     |
+| Airtable setup            |    H     |     .5hrs      |   .25hrs      |     hr     |
+| Donut Chart Research      |    H     |       2hr      |      hr      |     hr     |
+| Link/Route Skeleton       |    H     |       1hr      |     hrs      |    hrs     |
+| Nav Component             |    H     |       1hr      |     hrs      |    hrs     |
+| Table Component           |    H     |    1.5hrs      |      hr      |     hr     |
+| API GET Request           |    H     |       1hr      |      hr      |     hr     |
+| Calculations Component    |    H     |      2hrs      |     hrs      |    hrs     |
+| Donut Component           |    M     |      3hrs      |      hr      |     hr     |
+| Details Component         |    H     |      2hrs      |     hrs      |    hrs     |
+| Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |
+| Basic CSS                 |    H     |      3hrs      |     hrs      |    hrs     |
+| Render Results            |    H     |      3hrs      |      hr      |     hr     |
+| BatchMenu Component       |    L     |       1hr      |      hr      |     hr     |
+| AddEntry Component        |    H     |      .5hr      |      hr      |     hr     |
+| Form Component            |    H     |       1hr      |      hr      |     hr     |
+| API POST Request          |    H     |       1hr      |     hrs      |    hrs     |
+| CategoryDropdown Component|    H     |      2hrs      |      hr      |     hr     |
+| Debugging                 |    H     |      3hrs      |      hr      |     hr     |
+| MVP Total                 |    H     |     33hrs      |     hrs      |    hrs     |
+| Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
+| API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |
+| API DELETE Request        |    M     |     .5hrs      |     hrs      |    hrs     |
+| Adjust Components for PUT/DELETE| M  |      2hrs      |      hr      |     hr     |
+| Filter Table              |    L     |      2hrs      |     hrs      |    hrs     |
+| Add Additional Batches    |    L     |      3hrs      |     hrs      |    hrs     |
+| Render Components by Batch|    L     |      2hrs      |     hrs      |    hrs     |
+| PMVP Total                |    L     |     16hrs      |     hrs      |    hrs     |
 
 ## SWOT Analysis
 
 ### Strengths:
 
-
+I feel quite confident with the React framework and I have a very clear understanding of the Airtable data I am using and what I want to do with it. I've also thought out my wireframe with great detail as compared to P1 and my components are all broken down into smaller, very manageable tasks so I expect a consistent workflow without ambiguity on what I want or what I should be doing to slow me down.
 
 ### Weaknesses:
 
-I am still not terribly clear on CRUD and how to make sure I can carry each aspect out for this project. Additionally, I prefer to stick to functional components but given the parameters of the project, I'll need to use class components, as well. I will likely use most of my research time/manager help on these matters.
+This app is very reliant on data visualization and presentation so I will need to spend quite some time on CSS this time around. Although CSS is where I feel the least confident, I have already learned valuable lessons from previous assignments (such as taking the time to give JSX elements proper containers, classNames and IDs) and I am much more motivated to create an app that is as pleasant to look at as it is functional.
 
 ### Opportunities:
 
-This project is the culmination of the last 2 weeks and will give me an opportunity to solidify my understanding of react. I also happen to be interested in the function of my app given my interests, so I am motivated to make it look usable and attractive.
+Due to my deep understanding of the data I will be using as well as my experience configuring budgets to render data that is useful and informative, I feel that the Calculations component will be an area for me to showcase my pre-software engineering skillset combined with what I have learned in the past few weeks. 
 
 ### Threats:
 
-Whenever I get stuck with an error or an issue, I tend to go down a rabbit hole of online searches and debugging. Often times, I don't timebox these episodes and lose a lot of time. While this is typically a favorable characteristic in a developer, I'll need to make sure I know when to ask for help.
+The Donut Chart! It is a complete unknown and is the one thing that could throw off my entire project schedule and leave me strapped for time to work on the CSS. My backup plan is to scrap the donut chart altogether and focus on the entries table and calculations but that would be highly disappointing. 
