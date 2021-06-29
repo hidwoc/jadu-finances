@@ -30,7 +30,7 @@ Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to th
 
 ## Component Hierarchy
 
-![imageAlt]()
+![Jadu-Finances Component Hierachy](https://user-images.githubusercontent.com/83293460/123825774-2f655f00-d8cd-11eb-9b3a-94651e27e7b1.png)
 
 ## API and Data Sample
 
