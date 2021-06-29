@@ -1,6 +1,7 @@
 const Expenses = (props) => {
   const { selectedExpenses } = props;
 
+  console.log(selectedExpenses)
   return (
     <div>
       <h2>Details</h2>
