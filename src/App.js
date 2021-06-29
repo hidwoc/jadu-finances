@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Route } from "react-router-dom";
 import axios from "axios";
+import Details from "./components/Details"
 import Nav from "./components/Nav";
 import { baseURLSales, baseURLExpenses, config } from "./services";
 import "./App.css";
@@ -34,7 +35,7 @@ function App() {
        * ? Leave this as NOT an exact path so I can gray it out in CSS?
        *  */}
       <Route path="/details/:id">
-        <h2>Details</h2>
+        <Details salesData={salesData} expensesData={expensesData}/>
       </Route>
       {/**
        * TODO: Link in ToForm.jsx
