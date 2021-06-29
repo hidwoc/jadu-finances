@@ -23,18 +23,21 @@ Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to th
 ![Mobile6 Form](https://user-images.githubusercontent.com/83293460/123721305-048af480-d854-11eb-801f-5ec3cee911dd.png)
 
 ![Mobile2 SALES1](https://user-images.githubusercontent.com/83293460/123721300-03f25e00-d854-11eb-80bb-de29c3a64628.png)
-![Mobile4 EXPENSES1](https://user-images.githubusercontent.com/83293460/123721302-03f25e00-d854-11eb-8de8-14c62b32985b.png)
 ![Mobile3 SALES2](https://user-images.githubusercontent.com/83293460/123721301-03f25e00-d854-11eb-8c86-286c48d8c2e0.png)
+
+![Mobile4 EXPENSES1](https://user-images.githubusercontent.com/83293460/123721302-03f25e00-d854-11eb-8de8-14c62b32985b.png)
 ![Mobile5 EXPENSES2](https://user-images.githubusercontent.com/83293460/123721303-048af480-d854-11eb-80b0-733bdf351661.png)
 
 
 ## Component Hierarchy
 
+
+
 ![Jadu-Finances Component Hierachy](https://user-images.githubusercontent.com/83293460/123825774-2f655f00-d8cd-11eb-9b3a-94651e27e7b1.png)
 
 ## API and Data Sample
 
-I'll need to use at least 2 API calls - one for sales, one for expenses, and potentially additional for following batches.
+I'll need to use 2 API calls - one for sales, one for expenses.
 
 https://api.airtable.com/v0/appZxWoXguPFRSCON/sales
 
@@ -115,15 +118,14 @@ Expenses Airtable Sample
 
 #### MVP
 
-- Successful API GET calls to Airtable may_sales and may_expenses tab.
-- Populate Select Batch Dropdown Menu with batches and render appropriate batch's summary, expense and sales details
+- Nav Bar that links to summary, expenses, sales components
+- Successful API GET calls to Airtable sales and expenses tab.
+- Populate BatchMenu with batches and render appropriate batch's summary, expense and sales details
 - Render financial calculations by category, total expense, total sales, and net income.
-- Render donut chart summary breaking down finances into appropriate categories.
+- Render donut chart breaking down finances into appropriate categories.
 - Render table displaying sales/expense entries.
 - Add sale/expense button that links to Form component that successfully POSTS a new entry.
-- Nav Bar that links to summary, expenses, sales components
 - Media Query
-- Select Batch Dropdown Menu
 - At least 6 Rendered Components Required:
 1. Financial Calculations
 2. Donut Chart
@@ -131,22 +133,20 @@ Expenses Airtable Sample
 4. Nav Bar
 5. Details (Expenses, Sales)
 6. Summary
-7. Select Batch Dropdown Menu
+7. Batch Menu
 8. To Form button
 9. Form
-10. Category/Product Input: Dropdown Menu
+10. Category Dropdown
 
 
 #### PostMVP
 
 - Combo Chart on Summary
 - Allow editing/deleting posts (via mouse-over icon change to edit and additional delete button on the Form component)
-- Add Batch option
-- Sales / Expenses over time on summary page
+- Add Batch option?
 - Group ingredient expenses together on Donut Chart
 - Highlight Donut Chart category on calculation hover (and vice-versa)
-- On Donut/Calculation category click, filter Details Table to show only entries in that category
-- Ability to add categories on Form and render financial calculations and donut summary appropriately ???
+- On Donut/Calculation category click, filter Table to show only entries in that category
 
 
 ## Project Schedule
@@ -164,7 +164,7 @@ Expenses Airtable Sample
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      3hrs      |     2hrs      |    hrs     |
+| Proposal                  |    H     |      3hrs      |     3hrs      |    3hrs     |
 | Airtable setup            |    H     |     .5hrs      |   .25hrs      |     hr     |
 | Donut Chart Research      |    H     |       2hr      |      hr      |     hr     |
 | Link/Route Skeleton       |    H     |       1hr      |     hrs      |    hrs     |
