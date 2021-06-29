@@ -1,4 +1,4 @@
-// populates BatchMenu to available batches
+// populates BatchMenu with available batches from data
 // selects batch to then filter data in App
 const BatchMenu = (props) => {
   const { expensesData, salesData, setSelectedBatch } = props;

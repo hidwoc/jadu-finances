@@ -1,15 +1,12 @@
+import Table from "./Table";
+
 const Expenses = (props) => {
   const { selectedExpenses } = props;
 
-  console.log(selectedExpenses)
   return (
     <div>
-      <h2>Details</h2>
-      <main>
-        {selectedExpenses.map((expense) => (
-          <h3 key={expense.id}>{expense.fields.entryID}</h3>
-        ))}
-      </main>
+      <h2>Expenses</h2>
+      <Table selectedExpenses={selectedExpenses}/>
     </div>
   );
 };

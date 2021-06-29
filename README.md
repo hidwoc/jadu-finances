@@ -52,26 +52,41 @@ Sales Airtable Sample
         {
             "id": "recYfbJfktNOa5PH3",
             "fields": {
-                "#": 6,
-                "Jar Discount": -3,
-                "Amount": 15,
-                "Product": "Kimchi",
-                "Quantity": "1",
-                "Customer": "Ash Suh",
-                "Batch": "MAY"
+                "entryID": "MAYKimchiAsh Suh",
+                "jarDiscount": -3,
+                "price": 15,
+                "category": "Kimchi",
+                "quantity": "1",
+                "customer": "Ash Suh",
+                "batch": "MAY",
+                "chargedDeliveryFee": "false"
             },
             "createdTime": "2021-06-28T01:33:03.000Z"
         },
         {
+            "id": "recI9wKLF0lwVWMbq",
+            "fields": {
+                "entryID": "MAYKimchiAsh Suh",
+                "jarDiscount": -1,
+                "price": 4,
+                "category": "Kimchi",
+                "quantity": "1",
+                "customer": "Ash Suh",
+                "batch": "MAY",
+                "chargedDeliveryFee": "false"
+            },
+            "createdTime": "2021-06-28T01:34:14.000Z"
+        },
+        {
             "id": "rec4B8F1QoeDxZCCK",
             "fields": {
-                "#": 8,
-                "Amount": 15,
-                "Product": "Kimchi",
-                "Delivery Fee?": true,
-                "Quantity": "1",
-                "Customer": "Frank & Christine",
-                "Batch": "MAY"
+                "entryID": "MAYKimchiFrank & Christine",
+                "price": 15,
+                "category": "Kimchi",
+                "quantity": "1",
+                "customer": "Frank & Christine",
+                "batch": "MAY",
+                "chargedDeliveryFee": "true"
             },
             "createdTime": "2021-06-28T01:34:53.000Z"
         }
@@ -88,27 +103,38 @@ Expenses Airtable Sample
         {
             "id": "recHbCK7Vc3qgaoTK",
             "fields": {
-                "#": 7,
-                "Category": "Supplies",
-                "Amount": 42.45,
-                "Description": "Fermentation Container",
-                "Vendor": "Amazon",
-                "Quantity": "11L",
-                "Batch": "MAY"
+                "entryID": "MAYSuppliesFermentation Container",
+                "category": "Supplies",
+                "price": 42.45,
+                "description": "Fermentation Container",
+                "vendor": "Amazon",
+                "quantity": "11L",
+                "batch": "MAY"
             },
             "createdTime": "2021-06-28T01:41:19.000Z"
         },
         {
             "id": "recgjVt3MLPVuys1E",
             "fields": {
-                "#": 8,
-                "Category": "Supplies",
-                "Amount": 10,
-                "Description": "Mixing Bowl",
-                "Batch": "MAY"
+                "entryID": "MAYSuppliesMixing Bowl",
+                "category": "Supplies",
+                "price": 10,
+                "description": "Mixing Bowl",
+                "batch": "MAY"
             },
             "createdTime": "2021-06-28T01:41:55.000Z"
         },
+        {
+            "id": "recf15DGBYBLmGISB",
+            "fields": {
+                "entryID": "MAYSuppliesMixing Gloves",
+                "category": "Supplies",
+                "price": 3.99,
+                "description": "Mixing Gloves",
+                "batch": "MAY"
+            },
+            "createdTime": "2021-06-28T01:42:18.000Z"
+        }
     ],
     "offset": "recf15DGBYBLmGISB"
 }
@@ -165,17 +191,17 @@ Expenses Airtable Sample
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Proposal                  |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Airtable setup            |    H     |     .5hrs      |   .25hrs      |     hr     |
-| Donut Chart Research      |    H     |       2hr      |      hr      |     hr     |
-| Link/Route Skeleton       |    H     |       1hr      |     hrs      |    hrs     |
-| API GET Request           |    H     |       1hr      |      hr      |     hr     |
-| Nav Component             |    H     |       2hr      |     hrs      |    hrs     |
-| BatchMenu Component       |    H     |       1hr      |      hr      |     hr     |
-| Table Component           |    H     |    1.5hrs      |      hr      |     hr     |
+| Airtable setup            |    H     |     .5hrs      |    .5hrs      |     hr     |
+| Donut Chart Research      |    H     |       2hr      |    .5hrs      |     hr     |
+| Link/Route Skeleton       |    H     |       1hr      |   .25hrs      |    hrs     |
+| API GET Request           |    H     |       1hr      |    .15hr      |     hr     |
+| Nav Component             |    H     |       2hr      |   .15hrs      |    hrs     |
+| BatchMenu Component       |    H     |       1hr      |      1hr      |     hr     |
+| Table Component           |    H     |    1.5hrs      |    .75hr      |     hr     |
 | Render Results            |    H     |      3hrs      |      hr      |     hr     |
 | Calculations Component    |    H     |      2hrs      |     hrs      |    hrs     |
 | DonutChart Component      |    M     |      3hrs      |      hr      |     hr     |
-| Details Component         |    H     |      2hrs      |     hrs      |    hrs     |
+| Sales/Expenses Component  |    H     |      2hrs      |   .6hrs      |    hrs     |
 | Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |
 | Basic CSS                 |    H     |      3hrs      |     hrs      |    hrs     |
 | ToForm Component          |    H     |      .5hr      |      hr      |     hr     |

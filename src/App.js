@@ -9,9 +9,12 @@ import { baseURLSales, baseURLExpenses, config } from "./services";
 import "./App.css";
 
 function App() {
+  // rawData
   const [expensesData, setExpensesData] = useState([]);
   const [salesData, setSalesData] = useState([]);
-  const [selectedBatch, setSelectedBatch] = useState(""); // from BatchMenu
+  // select batch via BatchMenu
+  const [selectedBatch, setSelectedBatch] = useState("");
+  // filteredData by selectedBatch
   const [selectedSales, setSelectedSales] = useState([]);
   const [selectedExpenses, setSelectedExpenses] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
@@ -29,8 +32,9 @@ function App() {
     };
     fetchSalesData();
 
-  }, []);
+  }, [toggleFetch]);
 
+  // Filter rawData to render the selected batch when selectedBatch is selected on BatchMenu
   useEffect(() => {
     setSelectedSales(salesData.filter((sale) => sale.fields.batch === selectedBatch));
     setSelectedExpenses(expensesData.filter((expense) => expense.fields.batch === selectedBatch));
