@@ -5,13 +5,28 @@
 
 ## Project Description
 
-Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to the current nature of the business, finances are tracked on a batch basis (which roughly correlate to months). On the summary/landing page the business owner is able to see a summary of their sales, expenses and net profit for the selected batch, as well as total sales/expenses over time (PMVP). The sales page will display the current batch's sales divided into categories and they are able to add sales entries. The expenses page will display the selected batch's expenses divided into categories and they are able to add expenses. 
+Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to the current nature of the business, finances are tracked on a batch basis (which roughly correlate to months). On the summary/landing page the business owner is able to see a summary of their sales, expenses and net profit for the selected batch, as well as total sales/expenses over time in the form of a combo (bar and line) chart (PMVP). The sales page will display the current batch's sales divided into categories and they are able to add sales entries. The expenses page will display the selected batch's expenses divided into categories and they are able to add expenses. 
 
 ## Wireframes
 
+### Desktop
 
+![Desktop1 Sumary](https://user-images.githubusercontent.com/83293460/123810022-16a27c80-d8c0-11eb-9f16-dbab28009ba1.png)
 
-![imageAlt](wireframes/Desktop1 Summary.png)
+![Desktop2 Expense](https://user-images.githubusercontent.com/83293460/123721274-f63cd880-d853-11eb-9af1-35b0dc1ef6f2.png)
+![Desktop3 Form](https://user-images.githubusercontent.com/83293460/123721282-f9d05f80-d853-11eb-84d4-885230918bec.png)
+
+### Mobile
+
+![Mobile1 SUMMARY](https://user-images.githubusercontent.com/83293460/123809999-11453200-d8c0-11eb-8194-16507f7331de.png)
+
+![Mobile6 Form](https://user-images.githubusercontent.com/83293460/123721305-048af480-d854-11eb-801f-5ec3cee911dd.png)
+
+![Mobile2 SALES1](https://user-images.githubusercontent.com/83293460/123721300-03f25e00-d854-11eb-80bb-de29c3a64628.png)
+![Mobile4 EXPENSES1](https://user-images.githubusercontent.com/83293460/123721302-03f25e00-d854-11eb-8de8-14c62b32985b.png)
+![Mobile3 SALES2](https://user-images.githubusercontent.com/83293460/123721301-03f25e00-d854-11eb-8c86-286c48d8c2e0.png)
+![Mobile5 EXPENSES2](https://user-images.githubusercontent.com/83293460/123721303-048af480-d854-11eb-80b0-733bdf351661.png)
+
 
 ## Component Hierarchy
 
@@ -97,6 +112,7 @@ May_Expenses Airtable Sample
 #### MVP
 
 - Successful API GET calls to Airtable may_sales and may_expenses tab.
+- Populate Select Batch Dropdown Menu with batches and render appropriate batch's summary, expense and sales details
 - Render financial calculations by category, total expense, total sales, and net income.
 - Render donut chart summary breaking down finances into appropriate categories.
 - Render table displaying sales/expense entries.
@@ -112,16 +128,16 @@ May_Expenses Airtable Sample
 5. Details (Expenses, Sales)
 6. Summary
 7. Select Batch Dropdown Menu
-8. Add expense/sale button
+8. To Form button
 9. Form
 10. Category/Product Input: Dropdown Menu
 
 
 #### PostMVP
 
+- Combo Chart on Summary
 - Allow editing/deleting posts (via mouse-over icon change to edit and additional delete button on the Form component)
-- Populate Select Batch Dropdown Menu with additional batches and allow Add Batch option
-- Select Batch Dropdown Menu renders appropriate batch's summary, expense and sales details
+- Add Batch option
 - Sales / Expenses over time on summary page
 - Group ingredient expenses together on Donut Chart
 - Highlight Donut Chart category on calculation hover (and vice-versa)
@@ -137,7 +153,7 @@ May_Expenses Airtable Sample
 | Jun 30 | Link/Route Skeleton, Component Creation, Successful API GET  | Not Started |
 | Jul 1  | Render Components, Successful API POST                       | Not Started |
 | Jul 2  | Deploy, CSS, Media Query                                     | Not Started |
-| Jul 6  | Advanced CSS (Transitions, onHover effects), Filter Table    | Not Started |
+| Jul 6  | Advanced CSS (Transitions, onHover effects), Combo Chart     | Not Started |
 | Jul 7  | Presentations                                                | Not Started |
 
 ## Timeframes
@@ -148,23 +164,24 @@ May_Expenses Airtable Sample
 | Airtable setup            |    H     |     .5hrs      |   .25hrs      |     hr     |
 | Donut Chart Research      |    H     |       2hr      |      hr      |     hr     |
 | Link/Route Skeleton       |    H     |       1hr      |     hrs      |    hrs     |
-| Nav Component             |    H     |       2hr      |     hrs      |    hrs     |
-| Table Component           |    H     |    1.5hrs      |      hr      |     hr     |
 | API GET Request           |    H     |       1hr      |      hr      |     hr     |
+| Nav Component             |    H     |       2hr      |     hrs      |    hrs     |
+| BatchMenu Component       |    H     |       1hr      |      hr      |     hr     |
+| Table Component           |    H     |    1.5hrs      |      hr      |     hr     |
+| Render Results            |    H     |      3hrs      |      hr      |     hr     |
 | Calculations Component    |    H     |      2hrs      |     hrs      |    hrs     |
-| Donut Component           |    M     |      3hrs      |      hr      |     hr     |
+| DonutChart Component      |    M     |      3hrs      |      hr      |     hr     |
 | Details Component         |    H     |      2hrs      |     hrs      |    hrs     |
 | Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |
 | Basic CSS                 |    H     |      3hrs      |     hrs      |    hrs     |
-| Render Results            |    H     |      3hrs      |      hr      |     hr     |
-| BatchMenu Component       |    L     |       1hr      |      hr      |     hr     |
-| AddEntry Component        |    H     |      .5hr      |      hr      |     hr     |
+| ToForm Component          |    H     |      .5hr      |      hr      |     hr     |
 | Form Component            |    H     |       1hr      |      hr      |     hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    hrs     |
-| CategoryDropdown Component|    H     |      2hrs      |      hr      |     hr     |
+| CategoryDropdown Component|    M     |      2hrs      |      hr      |     hr     |
 | Media Query               |    H     |      3hrs      |      hr      |     hr     |
 | Debugging                 |    H     |      3hrs      |      hr      |     hr     |
 | MVP Total                 |    H     |     37hrs      |     hrs      |    hrs     |
+| Combo Chart               |    M     |      3hrs      |     hrs      |    hrs     |
 | Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
 | API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |
 | API DELETE Request        |    M     |     .5hrs      |     hrs      |    hrs     |
