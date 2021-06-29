@@ -1,11 +1,11 @@
 const Sales = (props) => {
-  const { salesData } = props;
+  const { selectedSales } = props;
 
   return (
     <div>
       <h2>Details</h2>
       <main>
-        {salesData.map((sale) => (
+        {selectedSales.map((sale) => (
           <h3 key={sale.id}>{sale.fields.entryID}</h3>
         ))}
       </main>

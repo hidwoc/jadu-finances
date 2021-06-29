@@ -1,11 +1,11 @@
 const Expenses = (props) => {
-  const { expensesData } = props;
+  const { selectedExpenses } = props;
 
   return (
     <div>
       <h2>Details</h2>
       <main>
-        {expensesData.map((expense) => (
+        {selectedExpenses.map((expense) => (
           <h3 key={expense.id}>{expense.fields.entryID}</h3>
         ))}
       </main>
