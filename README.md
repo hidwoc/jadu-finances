@@ -11,7 +11,7 @@ Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to th
 
 
 
-![imageAlt]()
+![imageAlt](wireframes/Desktop1 Summary.png)
 
 ## Component Hierarchy
 
@@ -22,6 +22,7 @@ Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to th
 I'll need to use at least 2 API calls - one for sales, one for expenses, and potentially additional for following batches.
 
 https://api.airtable.com/v0/appZxWoXguPFRSCON/may_sales
+
 https://api.airtable.com/v0/appZxWoXguPFRSCON/may_expenses
 
 
@@ -147,7 +148,7 @@ May_Expenses Airtable Sample
 | Airtable setup            |    H     |     .5hrs      |   .25hrs      |     hr     |
 | Donut Chart Research      |    H     |       2hr      |      hr      |     hr     |
 | Link/Route Skeleton       |    H     |       1hr      |     hrs      |    hrs     |
-| Nav Component             |    H     |       1hr      |     hrs      |    hrs     |
+| Nav Component             |    H     |       2hr      |     hrs      |    hrs     |
 | Table Component           |    H     |    1.5hrs      |      hr      |     hr     |
 | API GET Request           |    H     |       1hr      |      hr      |     hr     |
 | Calculations Component    |    H     |      2hrs      |     hrs      |    hrs     |
@@ -161,8 +162,9 @@ May_Expenses Airtable Sample
 | Form Component            |    H     |       1hr      |      hr      |     hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    hrs     |
 | CategoryDropdown Component|    H     |      2hrs      |      hr      |     hr     |
+| Media Query               |    H     |      3hrs      |      hr      |     hr     |
 | Debugging                 |    H     |      3hrs      |      hr      |     hr     |
-| MVP Total                 |    H     |     33hrs      |     hrs      |    hrs     |
+| MVP Total                 |    H     |     37hrs      |     hrs      |    hrs     |
 | Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
 | API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |
 | API DELETE Request        |    M     |     .5hrs      |     hrs      |    hrs     |
