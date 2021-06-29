@@ -36,12 +36,12 @@ Jadu Finances tracks the finances of my small business "Jadu Banchan". Due to th
 
 I'll need to use at least 2 API calls - one for sales, one for expenses, and potentially additional for following batches.
 
-https://api.airtable.com/v0/appZxWoXguPFRSCON/may_sales
+https://api.airtable.com/v0/appZxWoXguPFRSCON/sales
 
-https://api.airtable.com/v0/appZxWoXguPFRSCON/may_expenses
+https://api.airtable.com/v0/appZxWoXguPFRSCON/expenses
 
 
-May_Sales Airtable Sample
+Sales Airtable Sample
 
 ```
 {
@@ -54,7 +54,8 @@ May_Sales Airtable Sample
                 "Amount": 15,
                 "Product": "Kimchi",
                 "Quantity": "1",
-                "Customer": "Ash Suh"
+                "Customer": "Ash Suh",
+                "Batch": "MAY"
             },
             "createdTime": "2021-06-28T01:33:03.000Z"
         },
@@ -66,7 +67,8 @@ May_Sales Airtable Sample
                 "Product": "Kimchi",
                 "Delivery Fee?": true,
                 "Quantity": "1",
-                "Customer": "Frank & Christine"
+                "Customer": "Frank & Christine",
+                "Batch": "MAY"
             },
             "createdTime": "2021-06-28T01:34:53.000Z"
         }
@@ -75,7 +77,7 @@ May_Sales Airtable Sample
 }
 ```
 
-May_Expenses Airtable Sample
+Expenses Airtable Sample
 
 ```
 {
@@ -84,11 +86,12 @@ May_Expenses Airtable Sample
             "id": "recHbCK7Vc3qgaoTK",
             "fields": {
                 "#": 7,
-                "Description": "Fermentation Container",
-                "Quantity": "11L",
                 "Category": "Supplies",
                 "Amount": 42.45,
-                "Vendor": "Amazon"
+                "Description": "Fermentation Container",
+                "Vendor": "Amazon",
+                "Quantity": "11L",
+                "Batch": "MAY"
             },
             "createdTime": "2021-06-28T01:41:19.000Z"
         },
@@ -96,9 +99,10 @@ May_Expenses Airtable Sample
             "id": "recgjVt3MLPVuys1E",
             "fields": {
                 "#": 8,
-                "Description": "Mixing Bowl",
                 "Category": "Supplies",
-                "Amount": 10
+                "Amount": 10,
+                "Description": "Mixing Bowl",
+                "Batch": "MAY"
             },
             "createdTime": "2021-06-28T01:41:55.000Z"
         },
