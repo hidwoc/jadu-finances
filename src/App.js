@@ -1,29 +1,29 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
-import Details from "./components/Details"
+import Expenses from "./components/Expenses";
+import Sales from "./components/Sales";
 import Nav from "./components/Nav";
 import { baseURLSales, baseURLExpenses, config } from "./services";
 import "./App.css";
 
 function App() {
   const [expensesData, setExpensesData] = useState([]);
-  const [salesData, setSalesData] = useState([])
+  const [salesData, setSalesData] = useState([]);
 
   useEffect(() => {
-    const fetchExpensesData = async() => {
+    const fetchExpensesData = async () => {
       const resp = await axios.get(baseURLExpenses, config);
       setExpensesData(resp.data.records);
-    }
+    };
     fetchExpensesData();
 
-    const fetchSalesData = async() => {
+    const fetchSalesData = async () => {
       const resp = await axios.get(baseURLSales, config);
       setSalesData(resp.data.records);
-    }
+    };
     fetchSalesData();
-  },[])
-
+  }, []);
 
   return (
     <div className="App">
@@ -34,8 +34,11 @@ function App() {
       {/**
        * ? Leave this as NOT an exact path so I can gray it out in CSS?
        *  */}
-      <Route path="/details/:id">
-        <Details salesData={salesData} expensesData={expensesData}/>
+      <Route path="/details/expenses">
+        <Expenses expensesData={expensesData} />
+      </Route>
+      <Route path="/details/sales">
+        <Sales salesData={salesData} />
       </Route>
       {/**
        * TODO: Link in ToForm.jsx
