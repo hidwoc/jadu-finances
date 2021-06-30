@@ -23,7 +23,13 @@ const Form = (props) => {
     };
 
     await axios.post(baseURLExpenses, { fields: newEntry }, config);
-
+     setBatch("");
+     setDescription("");
+     setQuantity("");
+     setCategory("")
+     setPrice(0)
+     setVendor("")
+     
     props.setToggleFetch((curr) => !curr)
   };
 

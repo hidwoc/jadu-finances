@@ -41,7 +41,7 @@ function App() {
     setSelectedExpenses(
       expensesData.filter((expense) => expense.fields.batch === selectedBatch)
     );
-  }, [selectedBatch]);
+  }, [selectedBatch, toggleFetch]);
 
   return (
     <div className="App">
