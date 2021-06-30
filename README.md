@@ -199,7 +199,7 @@ Expenses Airtable Sample
 | BatchMenu Component       |    H     |       1hr      |      hr      |     1hr     |
 | Table Component           |    H     |    1.5hrs      |    hr      |    .75hr     |
 | Render Results            |    H     |      3hrs      |      hr      |     hr     |
-| Calculations Component    |    H     |      2hrs      |     .5hr      |    1hrs     |
+| Calculations Component    |    H     |      2hrs      |     1hr      |    1hrs     |
 | DonutChart Component      |    M     |      3hrs      |      hr      |     hr     |
 | Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    .6hrs     |
 | Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |

@@ -7,45 +7,55 @@ const Expenses = (props) => {
   const reducer = (accumulator, expense) => accumulator + expense.fields.price;
   // total expenses
   const totalExpenses = Number(selectedExpenses.reduce(reducer, 0).toFixed(2));
-  console.log("total expenses: ", totalExpenses);
   // total packaging
-  const totalPackaging = Number(selectedExpenses
-    .filter((expense) => expense.fields.category === "Packaging")
-    .reduce(reducer, 0).toFixed(2));
-    console.log('total packaging: ', totalPackaging)
+  const totalPackaging = Number(
+    selectedExpenses
+      .filter((expense) => expense.fields.category === "Packaging")
+      .reduce(reducer, 0)
+      .toFixed(2)
+  );
   // total supplies
-  const totalSupplies = Number(selectedExpenses
-    .filter((expense) => expense.fields.category === "Supplies")
-    .reduce(reducer, 0).toFixed(2));
-  console.log('total supplies: ', totalSupplies)
+  const totalSupplies = Number(
+    selectedExpenses
+      .filter((expense) => expense.fields.category === "Supplies")
+      .reduce(reducer, 0)
+      .toFixed(2)
+  );
   // total delivery
-  const totalDelivery = Number(selectedExpenses
-    .filter((expense) => expense.fields.category === "Delivery")
-    .reduce(reducer, 0).toFixed(2));
-  console.log('total delivery: ', totalDelivery)
+  const totalDelivery = Number(
+    selectedExpenses
+      .filter((expense) => expense.fields.category === "Delivery")
+      .reduce(reducer, 0)
+      .toFixed(2)
+  );
   // total kimchi
-  const totalKimchi = Number (selectedExpenses
-  .filter((expense) => expense.fields.category === "Kimchi")
-  .reduce(reducer, 0).toFixed(2));
-  console.log('total kimchi: ', totalKimchi);
+  const totalKimchi = Number(
+    selectedExpenses
+      .filter((expense) => expense.fields.category === "Kimchi")
+      .reduce(reducer, 0)
+      .toFixed(2)
+  );
   // total jalapenos
-  const totalJalapenos = Number (selectedExpenses
-    .filter((expense) => expense.fields.category === "Jalapenos")
-    .reduce(reducer, 0).toFixed(2));
-  console.log('total jalapenos: ', totalJalapenos)
+  const totalJalapenos = Number(
+    selectedExpenses
+      .filter((expense) => expense.fields.category === "Jalapenos")
+      .reduce(reducer, 0)
+      .toFixed(2)
+  );
   // total beans
-  const totalBeans = Number (selectedExpenses
-    .filter((expense) => expense.fields.category === "Beans")
-    .reduce(reducer, 0).toFixed(2));
-  console.log('total beans: ', totalBeans)
+  const totalBeans = Number(
+    selectedExpenses
+      .filter((expense) => expense.fields.category === "Beans")
+      .reduce(reducer, 0)
+      .toFixed(2)
+  );
   // total ingredients
   const totalIngredients = totalKimchi + totalBeans + totalJalapenos;
-  console.log(totalIngredients)
 
   return (
     <div>
       <h2>Expenses</h2>
-      <Table selectedExpenses={selectedExpenses}/>
+      <Table selectedExpenses={selectedExpenses} />
       <div id="expenses-calculations">
         <Calculation category="Total Expenses" total={totalExpenses} />
         <Calculation category="Supplies" total={totalSupplies} />
@@ -63,13 +73,13 @@ const Expenses = (props) => {
 export default Expenses;
 
 // OG DETAILS.JSX RIP
-  // const [entries, setEntries] = useState([]);
-  // const params = useParams();
-  
-  // useEffect(() => {
-  //   console.log(params.id)
-  //   params.id === "sales"
-  //   ? setEntries(props.salesData)
-  //   : setEntries(props.expensesData);
+// const [entries, setEntries] = useState([]);
+// const params = useParams();
 
-  // }, [params.id, props.salesData, props.expensesData])
+// useEffect(() => {
+//   console.log(params.id)
+//   params.id === "sales"
+//   ? setEntries(props.salesData)
+//   : setEntries(props.expensesData);
+
+// }, [params.id, props.salesData, props.expensesData])
