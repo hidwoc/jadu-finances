@@ -77,10 +77,10 @@ const Sales = (props) => {
   return (
     <main>
       <Table selectedSales={selectedSales} />
-      <div id="sales-donut">
+      <div id="donut-container">
         <Doughnut data={donutSales} />
       </div>
-      <div id="sales-calculations">
+      <div id="calculations-container">
         <Calculation category="Total Sales" total={totalSales} />
         <Calculation category="Kimchi" total={totalKimchi} />
         <Calculation category="Jalapenos" total={totalJalapenos} />

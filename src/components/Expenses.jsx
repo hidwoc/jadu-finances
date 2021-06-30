@@ -81,10 +81,10 @@ const Expenses = (props) => {
   return (
     <main>
       <Table selectedExpenses={selectedExpenses} />
-      <div id="expenses-donut">
+      <div id="donut-container">
         <Doughnut data={donutExpenses} />
       </div>
-      <div id="expenses-calculations">
+      <div id="calculations-container">
         <Calculation category="Total Expenses" total={totalExpenses} />
         <Calculation category="Supplies" total={totalSupplies} />
         <Calculation category="Packaging" total={totalPackaging} />

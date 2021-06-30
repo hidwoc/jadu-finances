@@ -4,13 +4,13 @@ const Nav = () => {
   return (
     <nav>
       <Link to="/">
-        <h2 id="tab-summary">Summary</h2>
+        <h2 className="nav-tab">Summary</h2>
       </Link>
       <Link to="/details/sales">
-        <h2 id="tab-sales">Sales</h2>
+        <h2 className="nav-tab">Sales</h2>
       </Link>
       <Link to="/details/expenses">
-        <h2 id="tab-expenses">Expenses</h2>
+        <h2 className="nav-tab">Expenses</h2>
       </Link>
     </nav>
   );
