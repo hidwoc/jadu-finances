@@ -23,14 +23,13 @@ const Form = (props) => {
     };
 
     await axios.post(baseURLExpenses, { fields: newEntry }, config);
-     setBatch("");
-     setDescription("");
-     setQuantity("");
-     setCategory("")
-     setPrice(0)
-     setVendor("")
-     
-    props.setToggleFetch((curr) => !curr)
+    setBatch("");
+    setDescription("");
+    setQuantity("");
+    setCategory("");
+    setPrice(0);
+    setVendor("");
+    props.setToggleFetch((curr) => !curr);
   };
 
   return (
@@ -49,6 +48,7 @@ const Form = (props) => {
           id="description"
           type="text"
           required
+          autoComplete="off"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
@@ -56,6 +56,7 @@ const Form = (props) => {
         <input
           id="quantity"
           type="text"
+          autoComplete="off"
           value={quantity}
           onChange={(e) => setQuantity(e.target.value)}
         />
@@ -80,6 +81,7 @@ const Form = (props) => {
           id="price"
           type="number"
           required
+          autoComplete="off"
           value={price}
           onChange={(e) => setPrice(e.target.valueAsNumber)}
         />
@@ -87,6 +89,7 @@ const Form = (props) => {
         <input
           id="vendor"
           type="text"
+          autoComplete="off"
           value={vendor}
           onChange={(e) => setVendor(e.target.value)}
         />

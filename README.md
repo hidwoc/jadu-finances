@@ -198,15 +198,15 @@ Expenses Airtable Sample
 | Nav Component             |    H     |       2hr      |   hrs      |  .15hrs     |
 | BatchMenu Component       |    H     |       1hr      |      hr      |     1hr     |
 | Table Component           |    H     |    1.5hrs      |    hr      |    .75hr     |
-| Render Results            |    H     |      3hrs      |      hr      |     hr     |
+| Render Results            |    H     |      3hrs      |      .5hr      |     hr     |
 | Calculations Component    |    H     |      2hrs      |     1hr      |    1hrs     |
 | DonutChart Component      |    M     |      3hrs      |    .5hr      |     hr     |
 | Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    .6hrs     |
 | Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |
 | Basic CSS                 |    H     |      3hrs      |     1.5hrs      |    hrs     |
-| ToForm Component          |    H     |      .5hr      |      hr      |     hr     |
-| Form Component            |    H     |       1hr      |      hr      |     hr     |
-| API POST Request          |    H     |       1hr      |     hrs      |    hrs     |
+| ToForm Component          |    H     |      .5hr      |      .2hr      |     hr     |
+| Form Component            |    H     |       1hr      |      1hr      |     hr     |
+| API POST Request          |    H     |       1hr      |     .5hr      |    hrs     |
 | CategoryDropdown Component|    M     |      2hrs      |      hr      |     hr     |
 | Media Query               |    H     |      3hrs      |      hr      |     hr     |
 | Debugging                 |    H     |      3hrs      |      hr      |     hr     |
