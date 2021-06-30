@@ -75,8 +75,7 @@ const Sales = (props) => {
   }
 
   return (
-    <div>
-      <h2>Sales</h2>
+    <main>
       <Table selectedSales={selectedSales} />
       <div id="sales-donut">
         <Doughnut data={donutSales} />
@@ -89,7 +88,7 @@ const Sales = (props) => {
         <Calculation category="Delivery Fees" total={totalDeliveryFee} />
         <Calculation category="Jar Discount" total={totalJarDiscount} />
       </div>
-    </div>
+    </main>
   );
 };
 

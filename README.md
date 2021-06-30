@@ -203,7 +203,7 @@ Expenses Airtable Sample
 | DonutChart Component      |    M     |      3hrs      |    .5hr      |     hr     |
 | Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    .6hrs     |
 | Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |
-| Basic CSS                 |    H     |      3hrs      |     hrs      |    hrs     |
+| Basic CSS                 |    H     |      3hrs      |     1hrs      |    hrs     |
 | ToForm Component          |    H     |      .5hr      |      hr      |     hr     |
 | Form Component            |    H     |       1hr      |      hr      |     hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    hrs     |

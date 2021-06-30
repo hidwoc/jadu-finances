@@ -78,10 +78,8 @@ const Expenses = (props) => {
       ],
     }
   
-
   return (
     <main>
-      <h2>Expenses</h2>
       <Table selectedExpenses={selectedExpenses} />
       <div id="expenses-donut">
         <Doughnut data={donutExpenses} />
