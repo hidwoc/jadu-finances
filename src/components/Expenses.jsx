@@ -61,7 +61,7 @@ const Expenses = (props) => {
       datasets: [
         {
           label: "Total Category Expenses",
-          data: [totalPackaging,totalSupplies,totalDelivery,totalKimchi,totalJalapenos,totalBeans,],
+          data: [totalPackaging,totalSupplies,totalDelivery,totalKimchi,totalJalapenos,totalBeans],
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",

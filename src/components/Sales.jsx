@@ -3,6 +3,7 @@ import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
 import Form from "./Form";
 import Table from "./Table";
+import { useEffect } from "react";
 
 const Sales = (props) => {
   const { selectedSales } = props;
@@ -11,45 +12,46 @@ const Sales = (props) => {
   // total kimchi
   const totalKimchi = Number(
     selectedSales
-      .filter((sale) => sale.fields.category === "Kimchi")
+    .filter((sale) => sale.fields.category === "Kimchi")
       .reduce(reducer, 0)
       .toFixed(2)
   );
   // total jalapenos
   const totalJalapenos = Number(
     selectedSales
-      .filter((sale) => sale.fields.category === "Jalapenos")
-      .reduce(reducer, 0)
-      .toFixed(2)
-  );
-  // total beans
-  const totalBeans = Number(
-    selectedSales
+    .filter((sale) => sale.fields.category === "Jalapenos")
+    .reduce(reducer, 0)
+    .toFixed(2)
+    );
+    // total beans
+    const totalBeans = Number(
+      selectedSales
       .filter((sale) => sale.fields.category === "Beans")
       .reduce(reducer, 0)
       .toFixed(2)
-  );
-  // total delivery fee
+      );
+      // total delivery fee
   const totalDeliveryFee = Number(
     selectedSales
-      .filter((sale) => sale.fields.chargedDeliveryFee === "true")
+    .filter((sale) => sale.fields.chargedDeliveryFee === "true")
       .reduce((accumulator) => accumulator + 4, 0)
       .toFixed(2)
   );
   // total jar discount \
   const totalJarDiscount = Number(
     selectedSales
-      .filter((sale) => sale.fields.jarDiscount)
-      .reduce((accumulator, sale) => accumulator + sale.fields.jarDiscount, 0)
-      .toFixed(2)
-  );
-  // total sales
-  const totalSales =
+    .filter((sale) => sale.fields.jarDiscount)
+    .reduce((accumulator, sale) => accumulator + sale.fields.jarDiscount, 0)
+    .toFixed(2)
+    );
+    // total sales
+    const totalSales =
     totalKimchi +
     totalJalapenos +
     totalBeans +
     totalDeliveryFee -
     totalJarDiscount;
+    
 
   const donutSales = {
     labels: ["Kimchi", "Jalapenos", "Beans","Delivery Fee"],

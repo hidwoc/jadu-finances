@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import axios from "axios";
 import BatchMenu from "./components/BatchMenu";
 import Expenses from "./components/Expenses";
-import Sales from "./components/Sales";
+import Sales from "./components/Sales"
 import Nav from "./components/Nav";
 import { baseURLSales, baseURLExpenses, config } from "./services";
 import "./App.css";
@@ -31,17 +31,15 @@ function App() {
       setSalesData(resp.data.records);
     };
     fetchSalesData();
-  }, [toggleFetch]);
 
-  // Filter rawData to render the selected batch when selectedBatch is selected on BatchMenu
-  useEffect(() => {
+    // Filter rawData to render the selected batch when selectedBatch is selected on BatchMenu
     setSelectedSales(
       salesData.filter((sale) => sale.fields.batch === selectedBatch)
     );
     setSelectedExpenses(
       expensesData.filter((expense) => expense.fields.batch === selectedBatch)
     );
-  }, [selectedBatch, toggleFetch]);
+  }, [toggleFetch, selectedBatch]);
 
   return (
     <div className="App">
@@ -67,9 +65,6 @@ function App() {
       <Route path="/details/sales">
         <Sales selectedSales={selectedSales} />
       </Route>
-      {/**
-       * TODO: Link in ToForm.jsx
-       *  */}
       <Route path="/details/:id/form">
         <h2>Form</h2>
       </Route>
