@@ -17,7 +17,7 @@ const BatchMenu = (props) => {
     <div>
       <select id="dropdown" onChange={handleChange}>
         {options.map((option) => (
-          <option>{option}</option>
+          <option key={option}>{option}</option>
         ))}
       </select>
     </div>

@@ -190,18 +190,18 @@ Expenses Airtable Sample
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Airtable setup            |    H     |     .5hrs      |    .5hrs      |     hr     |
-| Donut Chart Research      |    H     |       2hr      |    .5hrs      |     hr     |
-| Link/Route Skeleton       |    H     |       1hr      |   .25hrs      |    hrs     |
-| API GET Request           |    H     |       1hr      |    .15hr      |     hr     |
-| Nav Component             |    H     |       2hr      |   .15hrs      |    hrs     |
-| BatchMenu Component       |    H     |       1hr      |      1hr      |     hr     |
-| Table Component           |    H     |    1.5hrs      |    .75hr      |     hr     |
+| Proposal                  |    H     |      3hrs      |      hrs      |    3hrs     |
+| Airtable setup            |    H     |     .5hrs      |      .5hrs      |    .5hr     |
+| Donut Chart Research      |    H     |       2hr      |    .5hrs      |    .5hr     |
+| Link/Route Skeleton       |    H     |       1hr      |   .25hrs      |  .25hrs     |
+| API GET Request           |    H     |       1hr      |    .15hr      |   .15hr     |
+| Nav Component             |    H     |       2hr      |   .15hrs      |  .15hrs     |
+| BatchMenu Component       |    H     |       1hr      |      1hr      |     1hr     |
+| Table Component           |    H     |    1.5hrs      |    .75hr      |    .75hr     |
 | Render Results            |    H     |      3hrs      |      hr      |     hr     |
-| Calculations Component    |    H     |      2hrs      |     hrs      |    hrs     |
+| Calculations Component    |    H     |      2hrs      |     1hr      |    1hrs     |
 | DonutChart Component      |    M     |      3hrs      |      hr      |     hr     |
-| Sales/Expenses Component  |    H     |      2hrs      |   .6hrs      |    hrs     |
+| Sales/Expenses Component  |    H     |      2hrs      |   .6hrs      |    .6hrs     |
 | Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |
 | Basic CSS                 |    H     |      3hrs      |     hrs      |    hrs     |
 | ToForm Component          |    H     |      .5hr      |      hr      |     hr     |
@@ -210,7 +210,7 @@ Expenses Airtable Sample
 | CategoryDropdown Component|    M     |      2hrs      |      hr      |     hr     |
 | Media Query               |    H     |      3hrs      |      hr      |     hr     |
 | Debugging                 |    H     |      3hrs      |      hr      |     hr     |
-| MVP Total                 |    H     |     37hrs      |     hrs      |    hrs     |
+| MVP Total                 |    H     |     37hrs      |    5hrs      |   5hrs     |
 | Combo Chart               |    M     |      3hrs      |     hrs      |    hrs     |
 | Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
 | API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |

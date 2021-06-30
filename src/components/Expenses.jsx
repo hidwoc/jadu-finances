@@ -1,3 +1,4 @@
+import Calculation from "./Calculation";
 import Table from "./Table";
 
 const Expenses = (props) => {
@@ -7,6 +8,7 @@ const Expenses = (props) => {
     <div>
       <h2>Expenses</h2>
       <Table selectedExpenses={selectedExpenses}/>
+      <Calculation selectedExpenses={selectedExpenses} />
     </div>
   );
 };
