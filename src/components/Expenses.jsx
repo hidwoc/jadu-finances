@@ -1,5 +1,7 @@
+import { Route } from "react-router-dom"
 import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
+import Form from "./Form";
 import Table from "./Table";
 
 const Expenses = (props) => {
@@ -94,6 +96,9 @@ const Expenses = (props) => {
         <Calculation category="Jalapenos" total={totalJalapenos} />
         <Calculation category="Beans" total={totalBeans} />
       </div>
+      <Route path="/details/expenses/form">
+        <Form />
+      </Route>
     </main>
   );
 };
