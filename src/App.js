@@ -62,7 +62,7 @@ function App() {
        * ? Leave this as NOT an exact path so I can gray it out in CSS?
        *  */}
       <Route path="/details/expenses">
-        <Expenses selectedExpenses={selectedExpenses} />
+        <Expenses selectedExpenses={selectedExpenses} setToggleFetch={setToggleFetch}/>
       </Route>
       <Route path="/details/sales">
         <Sales selectedSales={selectedSales} />

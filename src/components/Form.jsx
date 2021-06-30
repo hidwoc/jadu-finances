@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { baseURLExpenses, config } from "../services";
 
-const Form = () => {
+const Form = (props) => {
   const [batch, setBatch] = useState("");
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState("");
@@ -22,7 +22,9 @@ const Form = () => {
       vendor,
     };
 
-    await axios.post(baseURLExpenses, newEntry, config);
+    await axios.post(baseURLExpenses, { fields: newEntry }, config);
+
+    props.setToggleFetch((curr) => !curr)
   };
 
   return (
@@ -73,7 +75,7 @@ const Form = () => {
           type="number"
           required
           value={price}
-          onChange={(e) => setPrice(e.target.value)}
+          onChange={(e) => setPrice(e.target.valueAsNumber)}
         />
         <label htmlFor="vendor">Vendor</label>
         <input

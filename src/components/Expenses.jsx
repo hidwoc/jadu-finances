@@ -3,9 +3,10 @@ import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
 import Form from "./Form";
 import Table from "./Table";
+import ToForm from "./ToForm";
 
 const Expenses = (props) => {
-  const { selectedExpenses } = props;
+  const { selectedExpenses, setToggleFetch } = props;
 
   const reducer = (accumulator, expense) => accumulator + expense.fields.price;
   // total expenses
@@ -82,6 +83,7 @@ const Expenses = (props) => {
   
   return (
     <main>
+      <ToForm />
       <Table selectedExpenses={selectedExpenses} />
       <div id="donut-container">
         <Doughnut data={donutExpenses} />
@@ -97,7 +99,7 @@ const Expenses = (props) => {
         <Calculation category="Beans" total={totalBeans} />
       </div>
       <Route path="/details/expenses/form">
-        <Form />
+        <Form setToggleFetch={setToggleFetch} />
       </Route>
     </main>
   );
