@@ -31,19 +31,29 @@ function App() {
       setSalesData(resp.data.records);
     };
     fetchSalesData();
-
   }, [toggleFetch]);
 
   // Filter rawData to render the selected batch when selectedBatch is selected on BatchMenu
   useEffect(() => {
-    setSelectedSales(salesData.filter((sale) => sale.fields.batch === selectedBatch));
-    setSelectedExpenses(expensesData.filter((expense) => expense.fields.batch === selectedBatch));
-  }, [selectedBatch])
+    setSelectedSales(
+      salesData.filter((sale) => sale.fields.batch === selectedBatch)
+    );
+    setSelectedExpenses(
+      expensesData.filter((expense) => expense.fields.batch === selectedBatch)
+    );
+  }, [selectedBatch]);
 
   return (
     <div className="App">
+      <header>
+        <h3>JADU FINANCES</h3>
+      </header>
       <Nav />
-      <BatchMenu salesData={salesData} expensesData={expensesData} setSelectedBatch={setSelectedBatch}/>
+      <BatchMenu
+        salesData={salesData}
+        expensesData={expensesData}
+        setSelectedBatch={setSelectedBatch}
+      />
 
       <Route exact path="/">
         <h2>Summary</h2>
