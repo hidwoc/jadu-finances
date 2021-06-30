@@ -1,3 +1,4 @@
+import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
 import Table from "./Table";
 
@@ -52,10 +53,39 @@ const Expenses = (props) => {
   // total ingredients
   const totalIngredients = totalKimchi + totalBeans + totalJalapenos;
 
+  const donutExpenses = {
+      labels: ["Packaging", "Supplies", "Delivery", "Kimchi", "Jalapenos", "Beans"],
+      datasets: [
+        {
+          label: "Total Category Expenses",
+          data: [totalPackaging,totalSupplies,totalDelivery,totalKimchi,totalJalapenos,totalBeans,],
+          backgroundColor: [
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+            "rgba(255, 159, 64, 0.2)"
+          ],
+          borderColor: ["rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 206, 86, 1)",
+          "rgba(75, 192, 192, 1)",
+          "rgba(153, 102, 255, 1)",
+          "rgba(255, 159, 64, 1)"],
+          borderWidth: 1,
+        }
+      ],
+    }
+  
+
   return (
-    <div>
+    <main>
       <h2>Expenses</h2>
       <Table selectedExpenses={selectedExpenses} />
+      <div id="expenses-donut">
+        <Doughnut data={donutExpenses} />
+      </div>
       <div id="expenses-calculations">
         <Calculation category="Total Expenses" total={totalExpenses} />
         <Calculation category="Supplies" total={totalSupplies} />
@@ -66,7 +96,7 @@ const Expenses = (props) => {
         <Calculation category="Jalapenos" total={totalJalapenos} />
         <Calculation category="Beans" total={totalBeans} />
       </div>
-    </div>
+    </main>
   );
 };
 

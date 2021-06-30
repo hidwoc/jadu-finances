@@ -1,3 +1,4 @@
+import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
 import Table from "./Table";
 
@@ -12,7 +13,6 @@ const Sales = (props) => {
       .reduce(reducer, 0)
       .toFixed(2)
   );
-  console.log("total Kimchi", totalKimchi);
   // total jalapenos
   const totalJalapenos = Number(
     selectedSales
@@ -20,7 +20,6 @@ const Sales = (props) => {
       .reduce(reducer, 0)
       .toFixed(2)
   );
-  console.log("total Jalapenos", totalJalapenos);
   // total beans
   const totalBeans = Number(
     selectedSales
@@ -28,7 +27,6 @@ const Sales = (props) => {
       .reduce(reducer, 0)
       .toFixed(2)
   );
-  console.log("total Beans", totalBeans);
   // total delivery fee
   const totalDeliveryFee = Number(
     selectedSales
@@ -36,7 +34,6 @@ const Sales = (props) => {
       .reduce((accumulator) => accumulator + 4, 0)
       .toFixed(2)
   );
-  console.log("total DeliveryFee", totalDeliveryFee);
   // total jar discount \
   const totalJarDiscount = Number(
     selectedSales
@@ -44,7 +41,6 @@ const Sales = (props) => {
       .reduce((accumulator, sale) => accumulator + sale.fields.jarDiscount, 0)
       .toFixed(2)
   );
-  console.log("total JarDiscount", totalJarDiscount);
   // total sales
   const totalSales =
     totalKimchi +
@@ -52,12 +48,39 @@ const Sales = (props) => {
     totalBeans +
     totalDeliveryFee -
     totalJarDiscount;
-  console.log("totalSales", totalSales);
+
+  const donutSales = {
+    labels: ["Kimchi", "Jalapenos", "Beans","Delivery Fee"],
+    datasets: [
+      {
+        label: "Total Category Sales",
+        data: [totalKimchi,totalJalapenos,totalBeans, totalDeliveryFee],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 206, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(255, 159, 64, 0.2)"
+        ],
+        borderColor: ["rgba(255, 99, 132, 1)",
+        "rgba(54, 162, 235, 1)",
+        "rgba(255, 206, 86, 1)",
+        "rgba(75, 192, 192, 1)",
+        "rgba(153, 102, 255, 1)",
+        "rgba(255, 159, 64, 1)"],
+        borderWidth: 1,
+      }
+    ],
+  }
 
   return (
     <div>
       <h2>Sales</h2>
       <Table selectedSales={selectedSales} />
+      <div id="sales-donut">
+        <Doughnut data={donutSales} />
+      </div>
       <div id="sales-calculations">
         <Calculation category="Total Sales" total={totalSales} />
         <Calculation category="Kimchi" total={totalKimchi} />

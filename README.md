@@ -179,9 +179,9 @@ Expenses Airtable Sample
 
 | Day    | Deliverable                                                  | Status      |
 | ------ | ------------------------------------------------------------ | ----------- |
-| Jun 29 | Proposal Approval, Airtable Setup, Donut Chart Setup         | Pending     |
-| Jun 30 | Link/Route Skeleton, Component Creation, Successful API GET  | Not Started |
-| Jul 1  | Render Components, Successful API POST                       | Not Started |
+| Jun 29 | Proposal Approval, Airtable Setup, Donut Chart Setup         | Donut In Progress     |
+| Jun 30 | Link/Route Skeleton, Component Creation, Successful API GET  | Completed |
+| Jul 1  | Render Components, Successful API POST                       | In Progress |
 | Jul 2  | Deploy, CSS, Media Query                                     | Not Started |
 | Jul 6  | Advanced CSS (Transitions, onHover effects), Combo Chart     | Not Started |
 | Jul 7  | Presentations                                                | Not Started |
@@ -200,7 +200,7 @@ Expenses Airtable Sample
 | Table Component           |    H     |    1.5hrs      |    hr      |    .75hr     |
 | Render Results            |    H     |      3hrs      |      hr      |     hr     |
 | Calculations Component    |    H     |      2hrs      |     1hr      |    1hrs     |
-| DonutChart Component      |    M     |      3hrs      |      hr      |     hr     |
+| DonutChart Component      |    M     |      3hrs      |    .5hr      |     hr     |
 | Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    .6hrs     |
 | Summary Component         |    H     |    1.5hrs      |     hrs      |    hrs     |
 | Basic CSS                 |    H     |      3hrs      |     hrs      |    hrs     |

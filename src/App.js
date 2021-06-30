@@ -13,7 +13,7 @@ function App() {
   const [expensesData, setExpensesData] = useState([]);
   const [salesData, setSalesData] = useState([]);
   // select batch via BatchMenu
-  const [selectedBatch, setSelectedBatch] = useState("");
+  const [selectedBatch, setSelectedBatch] = useState("MAY");
   // filteredData by selectedBatch
   const [selectedSales, setSelectedSales] = useState([]);
   const [selectedExpenses, setSelectedExpenses] = useState([]);
