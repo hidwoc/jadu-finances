@@ -38,6 +38,11 @@ function App() {
     };
     fetchSalesData();
 
+    
+  }, [toggleFetch]);
+  
+  // separate useEffect so .filter has a chance to be called on newly fetched data
+  useEffect(() => {
     // Filter rawData to render the selected batch when selectedBatch is selected on BatchMenu
     setSelectedSales(
       salesData.filter((sale) => sale.fields.batch === selectedBatch)
@@ -46,7 +51,7 @@ function App() {
       expensesData.filter((expense) => expense.fields.batch === selectedBatch)
     );
 
-  }, [toggleFetch, selectedBatch]);
+  }, [selectedBatch, salesData, expensesData])
 
 
   return (

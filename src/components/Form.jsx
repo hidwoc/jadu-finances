@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 import { baseURLExpenses, baseURLSales, config } from "../services";
-
+/**
+ * TODO: handle display none required inputs
+ */
 const Form = (props) => {
   const [className, setClassName] = useState("");
   const [batch, setBatch] = useState("");
   const [category, setCategory] = useState("Select Category");
-  const [chargedDeliveryFee, setChargedDeliveryFee] = useState(false);
+  const [chargedDeliveryFee, setChargedDeliveryFee] = useState("false");
   const [customer, setCustomer] = useState("");
   const [description, setDescription] = useState("");
   const [jarDiscount, setJarDiscount] = useState(0);
@@ -56,7 +58,7 @@ const Form = (props) => {
 
     setBatch("");
     setCategory("Select Category");
-    setChargedDeliveryFee(false);
+    setChargedDeliveryFee("false");
     setCustomer("");
     setDescription("");
     setJarDiscount(0);
@@ -87,7 +89,7 @@ const Form = (props) => {
           <input
             id="description"
             type="text"
-            required
+            required={className === "expenses" ? true : false}
             autoComplete="off"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -98,7 +100,7 @@ const Form = (props) => {
           <input
             id="customer"
             type="text"
-            required
+            required={className === "sales" ? true : false}
             autoComplete="off"
             value={customer}
             onChange={(e) => setCustomer(e.target.value)}
@@ -161,7 +163,7 @@ const Form = (props) => {
             id="chargedDeliveryFee"
             type="checkbox"
             value={chargedDeliveryFee}
-            onChange={(e) => setChargedDeliveryFee(e.target.checked)}
+            onChange={(e) => e.target.checked ? setChargedDeliveryFee("true") : setChargedDeliveryFee("false")}
           />
         </div>
         <div className={className} style={salesOnly}>

@@ -204,9 +204,9 @@ Expenses Airtable Sample
 | Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    1.6hrs     |
 | Summary Component         |    H     |    1.5hrs      |    hrs      |    .5hrs     |
 | Basic CSS                 |    H     |      3hrs      |     hrs      |    1.5hrs     |
-| ToForm Component          |    H     |      .5hr      |      hr      |     .2hr     |
-| Form Component            |    H     |       1hr      |      hr      |     1hr     |
-| API POST Request          |    H     |       1hr      |     hr      |    .5hrs     |
+| ToForm Component          |    H     |      .5hr      |      15min      |     .2hr     |
+| Form Component            |    H     |       1hr      |      1hr 10mins     |     1hr     |
+| API POST Request          |    H     |       1hr      |     .5HRS      |    .5hrs     |
 | CategoryDropdown Component|    M     |      2hrs      |      hr      |     hr     |
 | Media Query               |    H     |      3hrs      |      hr      |     hr     |
 | Debugging                 |    H     |      3hrs      |      5min     |     hr     |
