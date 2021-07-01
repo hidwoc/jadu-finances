@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 
-const ToForm = () => {
+const ToForm = (props) => {
+
   return (
     <div>
-      <Link to="/details/expenses/form">
+      <Link to={`/details/${props.details}/form`}>
         <button>Add an Entry</button>
       </Link>
     </div>

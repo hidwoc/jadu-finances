@@ -11,9 +11,9 @@ const BatchMenu = (props) => {
   const batches = new Set([...salesBatches, ...expensesBatches])
   const options = new Array(...batches);
 
-  useEffect(() => {
-    setKeys(options)
-  }, [options])
+  // useEffect(() => {
+  //   setKeys(options)
+  // }, [options])
 
   const handleChange = (e) => {
     setSelectedBatch(e.target.value);

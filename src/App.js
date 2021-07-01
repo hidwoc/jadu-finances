@@ -22,8 +22,8 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(false);
   
   // get unique Keys from BatchMenu
-  const [keys, setKeys] = useState([]);
-  let totalsObject = {};
+  // const [keys, setKeys] = useState([]);
+  // let totalsObject = {};
 
   useEffect(() => {
     const fetchExpensesData = async () => {
@@ -59,11 +59,11 @@ function App() {
         salesData={salesData}
         expensesData={expensesData}
         setSelectedBatch={setSelectedBatch}
-        setKeys={setKeys}
+        // setKeys={setKeys}
       />
 
       <Route exact path="/">
-        <Summary totalsObject={totalsObject}/>
+        <Summary /> {/*  totalsObject={totalsObject} */}
       </Route>
       {/**
        * ? Leave this as NOT an exact path so I can gray it out in CSS?

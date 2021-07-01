@@ -1,7 +1,5 @@
-import { Route } from "react-router-dom"
 import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
-import Form from "./Form";
 import Table from "./Table";
 import ToForm from "./ToForm";
 
@@ -83,7 +81,7 @@ const Expenses = (props) => {
   
   return (
     <main>
-      <ToForm />
+      <ToForm details="expenses" />
       <Table selectedExpenses={selectedExpenses} />
       <div id="donut-container">
         <Doughnut data={donutExpenses} />
@@ -98,9 +96,6 @@ const Expenses = (props) => {
         <Calculation category="Jalapenos" total={totalJalapenos} />
         <Calculation category="Beans" total={totalBeans} />
       </div>
-      {/* <Route path="/details/expenses/form">
-        <Form setToggleFetch={setToggleFetch} />
-      </Route> */}
     </main>
   );
 };
