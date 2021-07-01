@@ -1,8 +1,97 @@
-export const baseURLSales = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/sales`
-export const baseURLExpenses = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/expenses`
+export const baseURLSales = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/sales`;
+export const baseURLExpenses = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/expenses`;
 
 export const config = {
   headers: {
-    Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+    Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+  },
+};
+
+/// *** CALCULATION OBJECT *** ///
+export class Calculations {
+  constructor(data) {
+    this.data = data;
+  }
+  reducer() {
+    return (accumulator, entry) => accumulator + entry.fields.price;
+  }
+  totalKimchi(data) {
+    const kimchi = Number(
+      this.data
+        .filter((entry) => entry.fields.category === "Kimchi")
+        .reduce(this.reducer, 0)
+        .toFixed(2));
+    return kimchi;
   }
 }
+// *** SALES CALCULATIONS *** //
+const reducer = (accumulator, sale) => accumulator + sale.fields.price;
+// total kimchi
+const totalKimchi = Number(
+  selectedSales
+    .filter((sale) => sale.fields.category === "Kimchi")
+    .reduce(reducer, 0)
+    .toFixed(2)
+);
+// total jalapenos
+const totalJalapenos = Number(
+  selectedSales
+    .filter((sale) => sale.fields.category === "Jalapenos")
+    .reduce(reducer, 0)
+    .toFixed(2)
+);
+// total beans
+const totalBeans = Number(
+  selectedSales
+    .filter((sale) => sale.fields.category === "Beans")
+    .reduce(reducer, 0)
+    .toFixed(2)
+);
+// total delivery fee
+const totalDeliveryFee = Number(
+  selectedSales
+    .filter((sale) => sale.fields.chargedDeliveryFee === "true")
+    .reduce((accumulator) => accumulator + 4, 0)
+    .toFixed(2)
+);
+// total jar discount \
+const totalJarDiscount = Number(
+  selectedSales
+    .filter((sale) => sale.fields.jarDiscount)
+    .reduce((accumulator, sale) => accumulator + sale.fields.jarDiscount, 0)
+    .toFixed(2)
+);
+// total sales
+const totalSales =
+  totalKimchi +
+  totalJalapenos +
+  totalBeans +
+  totalDeliveryFee -
+  totalJarDiscount;
+
+const donutSales = {
+  labels: ["Kimchi", "Jalapenos", "Beans", "Delivery Fee"],
+  datasets: [
+    {
+      label: "Total Category Sales",
+      data: [totalKimchi, totalJalapenos, totalBeans, totalDeliveryFee],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.2)",
+        "rgba(54, 162, 235, 0.2)",
+        "rgba(255, 206, 86, 0.2)",
+        "rgba(75, 192, 192, 0.2)",
+        "rgba(153, 102, 255, 0.2)",
+        "rgba(255, 159, 64, 0.2)",
+      ],
+      borderColor: [
+        "rgba(255, 99, 132, 1)",
+        "rgba(54, 162, 235, 1)",
+        "rgba(255, 206, 86, 1)",
+        "rgba(75, 192, 192, 1)",
+        "rgba(153, 102, 255, 1)",
+        "rgba(255, 159, 64, 1)",
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
