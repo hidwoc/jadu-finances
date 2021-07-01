@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-import { baseURLExpenses, config } from "../services";
+import { baseURLExpenses, baseURLSales, config } from "../services";
 
 const Form = (props) => {
   const [className, setClassName] = useState("");
   const [batch, setBatch] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Select Category");
   const [chargedDeliveryFee, setChargedDeliveryFee] = useState(false);
   const [customer, setCustomer] = useState("");
   const [description, setDescription] = useState("");
   const [jarDiscount, setJarDiscount] = useState(0);
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState("");
+  const [quantitySold, setQuantitySold] = useState(0);
   const [vendor, setVendor] = useState("");
   const params = useParams();
 
@@ -28,21 +29,40 @@ const Form = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newEntry = {
-      batch,
-      description,
-      quantity,
-      category,
-      price,
-      vendor,
-    };
+    if (params.id === "expenses") {
+      const newEntry = {
+        batch,
+        description,
+        quantity,
+        category,
+        price,
+        vendor,
+      };
+      await axios.post(baseURLExpenses, { fields: newEntry }, config);
+    }
 
-    await axios.post(baseURLExpenses, { fields: newEntry }, config);
+    if (params.id === "sales") {
+      const newEntry = {
+        batch,
+        customer,
+        category,
+        quantity: quantitySold,
+        price,
+        chargedDeliveryFee,
+        jarDiscount,
+      };
+      await axios.post(baseURLSales, { fields: newEntry }, config);
+    }
+
     setBatch("");
+    setCategory("Select Category");
+    setChargedDeliveryFee(false);
+    setCustomer("");
     setDescription("");
-    setQuantity("");
-    setCategory("");
+    setJarDiscount(0);
     setPrice(0);
+    setQuantity("");
+    setQuantitySold(0);
     setVendor("");
     props.setToggleFetch((curr) => !curr);
   };
@@ -84,14 +104,26 @@ const Form = (props) => {
             onChange={(e) => setCustomer(e.target.value)}
           />
         </div>
-        <label htmlFor="quantity">Quantity</label>
-        <input
-          id="quantity"
-          type="text"
-          autoComplete="off"
-          value={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
-        />
+        <div className={className} style={expensesOnly}>
+          <label htmlFor="quantity">Quantity</label>
+          <input
+            id="quantity"
+            type="text"
+            autoComplete="off"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+          />
+        </div>
+        <div className={className} style={salesOnly}>
+          <label htmlFor="quantitySold">Quantity</label>
+          <input
+            id="quantitySold"
+            type="number"
+            autoComplete="off"
+            value={quantitySold}
+            onChange={(e) => setQuantitySold(e.target.valueAsNumber)}
+          />
+        </div>
         <label htmlFor="category">Category</label>
         <select
           id="category"
@@ -104,9 +136,15 @@ const Form = (props) => {
           <option value="Kimchi">Kimchi</option>
           <option value="Jalapenos">Jalapenos</option>
           <option value="Beans">Beans</option>
-          <option value="Supplies">Supplies</option>
-          <option value="Packaging">Packaging</option>
-          <option value="Delivery">Delivery</option>
+          <option className={className} style={expensesOnly} value="Supplies">
+            Supplies
+          </option>
+          <option className={className} style={expensesOnly} value="Packaging">
+            Packaging
+          </option>
+          <option className={className} style={expensesOnly} value="Delivery">
+            Delivery
+          </option>
         </select>
         <label htmlFor="price">Price</label>
         <input
@@ -134,7 +172,7 @@ const Form = (props) => {
             autoComplete="off"
             value={jarDiscount}
             onChange={(e) => setJarDiscount(e.target.valueAsNumber)}
-          />
+          />  
         </div>
         <div className={className} style={expensesOnly}>
           <label htmlFor="vendor">Vendor</label>
