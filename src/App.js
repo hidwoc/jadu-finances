@@ -3,8 +3,10 @@ import { Route } from "react-router-dom";
 import axios from "axios";
 import BatchMenu from "./components/BatchMenu";
 import Expenses from "./components/Expenses";
-import Sales from "./components/Sales"
+import Form from "./components/Form"
 import Nav from "./components/Nav";
+import Sales from "./components/Sales"
+import Summary from "./components/Summary";
 import { baseURLSales, baseURLExpenses, config } from "./services";
 import "./App.css";
 
@@ -18,6 +20,10 @@ function App() {
   const [selectedSales, setSelectedSales] = useState([]);
   const [selectedExpenses, setSelectedExpenses] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  
+  // get unique Keys from BatchMenu
+  const [keys, setKeys] = useState([]);
+  let totalsObject = {};
 
   useEffect(() => {
     const fetchExpensesData = async () => {
@@ -39,7 +45,9 @@ function App() {
     setSelectedExpenses(
       expensesData.filter((expense) => expense.fields.batch === selectedBatch)
     );
+
   }, [toggleFetch, selectedBatch]);
+
 
   return (
     <div className="App">
@@ -51,10 +59,11 @@ function App() {
         salesData={salesData}
         expensesData={expensesData}
         setSelectedBatch={setSelectedBatch}
+        setKeys={setKeys}
       />
 
       <Route exact path="/">
-        <h2>Summary</h2>
+        <Summary totalsObject={totalsObject}/>
       </Route>
       {/**
        * ? Leave this as NOT an exact path so I can gray it out in CSS?
@@ -66,7 +75,7 @@ function App() {
         <Sales selectedSales={selectedSales} />
       </Route>
       <Route path="/details/:id/form">
-        <h2>Form</h2>
+        <Form setToggleFetch={setToggleFetch} />
       </Route>
     </div>
   );

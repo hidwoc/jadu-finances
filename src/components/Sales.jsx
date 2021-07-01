@@ -3,7 +3,7 @@ import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
 import Form from "./Form";
 import Table from "./Table";
-import { useEffect } from "react";
+import ToForm from "./ToForm";
 
 const Sales = (props) => {
   const { selectedSales } = props;
@@ -80,6 +80,7 @@ const Sales = (props) => {
 
   return (
     <main>
+      <ToForm />
       <Table selectedSales={selectedSales} />
       <div id="donut-container">
         <Doughnut data={donutSales} />

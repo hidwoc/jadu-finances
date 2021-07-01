@@ -98,9 +98,9 @@ const Expenses = (props) => {
         <Calculation category="Jalapenos" total={totalJalapenos} />
         <Calculation category="Beans" total={totalBeans} />
       </div>
-      <Route path="/details/expenses/form">
+      {/* <Route path="/details/expenses/form">
         <Form setToggleFetch={setToggleFetch} />
-      </Route>
+      </Route> */}
     </main>
   );
 };

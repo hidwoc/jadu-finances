@@ -50,7 +50,9 @@ nav {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: .25fr 1fr 1fr;
   grid-template-areas:
+    "A D"
     "T D"
     "T C";
   gap: 10px;
@@ -85,3 +87,8 @@ table {
   display: grid;
   grid-template-columns: 1fr 1fr;
 } 
+
+/* NET INCOME */
+#big-calculation {
+
+}
