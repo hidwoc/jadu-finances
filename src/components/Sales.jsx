@@ -7,8 +7,8 @@ import { Calculations } from "../services"
 const Sales = (props) => {
   const { selectedSales } = props;
 
-  const salesCalculations = new Calcuations (selectedSales);
-
+  const salesCalculations = new Calculations (selectedSales);
+  // console.log(salesCalculations.totalKimchi());
   // const reducer = (accumulator, sale) => accumulator + sale.fields.price;
   // // total kimchi
   // const totalKimchi = Number(
@@ -84,15 +84,15 @@ const Sales = (props) => {
       <ToForm details="sales" />
       <Table selectedSales={selectedSales} />
       <div id="donut-container">
-        {/* <Doughnut data={donutSales} /> */}
+        <Doughnut data={salesCalculations.donutSales} />
       </div>
       <div id="calculations-container">
-        {/* <Calculation category="Total Sales" total={totalSales} /> */}
-        <Calculation category="Kimchi" total={salesCalculations.totalKimchi()} />
-        {/* <Calculation category="Jalapenos" total={totalJalapenos} />
-        <Calculation category="Beans" total={totalBeans} />
-        <Calculation category="Delivery Fees" total={totalDeliveryFee} />
-        <Calculation category="Jar Discount" total={totalJarDiscount} /> */}
+        <Calculation category="Total Sales" total={salesCalculations.totalSales} />
+        <Calculation category="Kimchi" total={salesCalculations.totalKimchi} />
+        <Calculation category="Jalapenos" total={salesCalculations.totalJalapenos} />
+        <Calculation category="Beans" total={salesCalculations.totalBeans} />
+        <Calculation category="Delivery Fees" total={salesCalculations.totalDeliveryFee} />
+        <Calculation category="Jar Discount" total={salesCalculations.totalJarDiscount} />
       </div>
     </main>
   );
