@@ -20,8 +20,9 @@ const BatchMenu = (props) => {
   }
 
   return (
-    <div id="batch-menu">
+    <div>
       <select id="dropdown" onChange={handleChange}>
+        <option disabled>Select Batch to View</option>
         {options.map((option) => (
           <option key={option}>{option}</option>
         ))}

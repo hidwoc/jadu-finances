@@ -16,7 +16,7 @@ const Table = (props) => {
             <th className={className}>
               {className === "expenses" ? "Vendor" : "Charged Delivery Fee?"}
             </th>
-            <th className={className}>
+            <th className={className} style={className === "expenses"? {display: "none"} : null}>
               {className === "expenses" ? null : "Jar Discount"}
             </th>
           </tr>
@@ -37,7 +37,7 @@ const Table = (props) => {
                   ? entry.fields.vendor
                   : entry.fields.chargedDeliveryFee}
               </td>
-              <td className={className}>
+              <td className={className} style={className === "expenses"? {display: "none"} : null}>
                 {className === "expenses"
                   ? null
                   : entry.fields.jarDiscount

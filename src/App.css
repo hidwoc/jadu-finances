@@ -8,19 +8,17 @@
 
 /* HEADER FOR BUSINESS NAME AND PROFILE PIC */
 header {
-  display: flex;
-  background: var(--claret);
   box-sizing: border-box;
   width: 100vw;
   height: 40px;
+  margin: 0;
   padding: 10px;
   align-items: center;
   border-bottom: 1px black solid;
 }
 
 h3 {
-  color: var(--apricot);
-  /* display: inline-block; */
+  display: inline-block;
   box-sizing: border-box;
   margin: 0;
 }
@@ -28,6 +26,7 @@ h3 {
 /* DIV SOUP OH YEAH */
 body {
   position: relative;
+  width: 100vw;
 }
 
 #nav-div {
@@ -35,7 +34,7 @@ body {
   transform: rotate(90deg);
   transform-origin: top left;
   width: 100vh;
-  position: absolute fixed;
+  position: fixed;
   top: 0;
   margin-left: 99%;
 }
@@ -44,10 +43,10 @@ body {
   text-align: right;
   margin-top: 20px;
   margin-right: 10%;
+  position: fixed;
 }
 
 #main-div {
-  position: absolute;
   margin: 20px;
   padding: 10px;
   width: 90vw;
@@ -110,29 +109,65 @@ nav a:visited {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: .25fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "A D"
     "T D"
     "T C";
   gap: 10px;
+  justify-items: center;
+}
+
+/* *** ENTRIES: add entry button and entries table */
+#entries {
+  grid-area: T;
+}
+
+/* TO FORM BUTTON */
+#add-entry {
+  text-align: center;
+}
+
+#add-entry button {
+  width: 70%;
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 10px;
 }
 
 /* ! TABLE */
 /* remove display block, give table header styling, border, every other row shaded
 fixed position, scroll inside */
+/* basic table CSS from https://www.w3schools.com/css/css_table.asp */
 table {
   display: inline-block;
   box-sizing: border-box;
   border: 1px solid black;
-  grid-area: T;
-  align-self: center;
+  border-collapse: collapse;
   width: 620px;
   max-height: 700px;
   overflow: scroll;
   justify-content: center;
 }
 
+table td, table th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
 /* Doughtnut */
 #donut-container {
   grid-area: D;
@@ -148,4 +183,18 @@ table {
 /* NET INCOME */
 #big-calculation {
 
+}
+
+@media only screen and (max-width: 1024px) {
+  .App body {
+    display: flex;
+    flex-direction: column;
+  }
+  #nav-div {
+    transform: none;
+    width: 100vw;
+    position: fixed;
+    top: 100px;
+    margin-left: 0;
+  }
 }
