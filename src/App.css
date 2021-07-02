@@ -5,11 +5,16 @@
   --darksienna: #2D0005;
 }
 
+.App {
+  position: relative;
+}
+
 /* HEADER FOR BUSINESS NAME AND PROFILE PIC */
 header {
   display: flex;
   background: var(--claret);
   box-sizing: border-box;
+  width: 100vw;
   height: 40px;
   padding: 10px;
   align-items: center;
@@ -23,6 +28,25 @@ h3 {
   margin: 0;
 }
 
+/* DIV SOUP OH YEAH */
+#nav-div {
+  /* *** ROTATE! *** */
+  transform: rotate(90deg);
+  transform-origin: top left;
+  width: 100vh;
+  position: fixed;
+  top: 0;
+  margin-left: 99%;
+}
+
+#batchmenu-div {
+
+}
+
+#main-div {
+  position: absolute;
+}
+
 /* *** BATCH MENU *** */
 #batch-menu {
   text-align: right;
@@ -34,23 +58,24 @@ h3 {
   font-size: 18px;
   padding: 5px;
 }
-/* NAV */
+
+/* *** NAV *** */
 /* FIXED, ABSOLUTE, ON SIDE LIKE TABS
 MEDIA QUERY: TABS ACROSS TOP */
-/* BATCH MENU IN NAV? */
 nav {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-end;
-  /* *** ROTATE! *** */
-  transform: rotate(90deg);
-  transform-origin: top left;
-  width: 100vh;
-  position: fixed;
-  top: 0;
-  margin-left: 99%;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: black;
 }
 
 .nav-tab {
