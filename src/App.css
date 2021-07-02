@@ -1,5 +1,39 @@
-/* HEADER FOR BUSINESS NAME AND PROFILE PIC */
+:root {
+  --apricot: #FFD5B8;
+  --claret: #720026;
+  --rosewood: #4F000B;
+  --darksienna: #2D0005;
+}
 
+/* HEADER FOR BUSINESS NAME AND PROFILE PIC */
+header {
+  display: flex;
+  background: var(--claret);
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 1px black solid;
+}
+
+h3 {
+  color: var(--apricot);
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* *** BATCH MENU *** */
+#batch-menu {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 10%;
+}
+
+#dropdown {
+  font-size: 18px;
+  padding: 5px;
+}
 /* NAV */
 /* FIXED, ABSOLUTE, ON SIDE LIKE TABS
 MEDIA QUERY: TABS ACROSS TOP */
@@ -46,7 +80,7 @@ nav {
   text-align: center;
 }
 
-/* main contains Expenses, Sales, Summary content */
+/* *** DETAILS *** */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -61,7 +95,8 @@ main {
   width: 90vw;
   height: 90vh;
 }
-/* TABLE */
+
+/* ! TABLE */
 /* remove display block, give table header styling, border, every other row shaded
 fixed position, scroll inside */
 table {

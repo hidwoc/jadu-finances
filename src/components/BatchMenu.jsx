@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 // populates BatchMenu with available batches from data
 // selects batch to then filter data in App
 const BatchMenu = (props) => {
-  const { expensesData, salesData, setSelectedBatch, setKeys } = props;
+  const { expensesData, salesData, setSelectedBatch } = props;
 
   const salesBatches = new Set(salesData.map((sale) => sale.fields.batch))
   const expensesBatches = new Set(expensesData.map((expense) => expense.fields.batch))
@@ -20,7 +20,7 @@ const BatchMenu = (props) => {
   }
 
   return (
-    <div>
+    <div id="batch-menu">
       <select id="dropdown" onChange={handleChange}>
         {options.map((option) => (
           <option key={option}>{option}</option>
