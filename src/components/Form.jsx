@@ -20,12 +20,7 @@ const Form = (props) => {
   const params = useParams();
 
   useEffect(() => {
-    if (params.id === "expenses") {
-      setClassName("expenses");
-    }
-    if (params.id === "sales") {
-      setClassName("sales");
-    }
+    setClassName(params.id)
   }, [params.id]);
 
   const handleSubmit = async (e) => {

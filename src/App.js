@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
 import BatchMenu from "./components/BatchMenu";
-import Expenses from "./components/Expenses";
+import Details from "./components/Details";
 import Form from "./components/Form"
 import Nav from "./components/Nav";
-import Sales from "./components/Sales"
 import Summary from "./components/Summary";
 import { baseURLSales, baseURLExpenses, config } from "./services";
 import "./App.css";
@@ -37,11 +36,12 @@ function App() {
       setSalesData(resp.data.records);
     };
     fetchSalesData();
-
     
   }, [toggleFetch]);
   
-  // separate useEffect so .filter has a chance to be called on newly fetched data
+  /** 
+   // separate useEffect so .filter has a chance to be called on newly fetched data???
+   * TODO:  update, rawData, selectedData, calculations on POST/PUT/DELETE*/
   useEffect(() => {
     // Filter rawData to render the selected batch when selectedBatch is selected on BatchMenu
     setSelectedSales(
@@ -73,11 +73,8 @@ function App() {
       {/**
        * ? Leave this as NOT an exact path so I can gray it out in CSS?
        *  */}
-      <Route path="/details/expenses">
-        <Expenses selectedExpenses={selectedExpenses} setToggleFetch={setToggleFetch}/>
-      </Route>
-      <Route path="/details/sales">
-        <Sales selectedSales={selectedSales} />
+      <Route path="/details/:id">
+        <Details selectedExpenses={selectedExpenses} selectedSales={selectedSales}/>
       </Route>
       <Route path="/details/:id/form">
         <Form setToggleFetch={setToggleFetch} />
