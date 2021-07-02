@@ -56,34 +56,36 @@ function App() {
       <header>
         <h3>JADU FINANCES</h3>
       </header>
-      <div id="nav-div">
-        <Nav />
-      </div>
-      <div id="batchmenu-div">
-        <BatchMenu
-          salesData={salesData}
-          expensesData={expensesData}
-          setSelectedBatch={setSelectedBatch}
-          // setKeys={setKeys}
-        />
-      </div>
-      <div id="main-div">
-        <Route exact path="/">
-          <Summary /> {/*  totalsObject={totalsObject} */}
-        </Route>
-        {/**
-         * ? Leave this as NOT an exact path so I can gray it out in CSS?
-         *  */}
-        <Route path="/details/:id">
-          <Details
-            selectedExpenses={selectedExpenses}
-            selectedSales={selectedSales}
+      <body>
+        <div id="nav-div">
+          <Nav />
+        </div>
+        <div id="batchmenu-div">
+          <BatchMenu
+            salesData={salesData}
+            expensesData={expensesData}
+            setSelectedBatch={setSelectedBatch}
+            // setKeys={setKeys}
           />
-        </Route>
-        <Route path="/details/:id/form">
-          <Form setToggleFetch={setToggleFetch} />
-        </Route>
-      </div>
+        </div>
+        <div id="main-div">
+          <Route exact path="/">
+            <Summary /> {/*  totalsObject={totalsObject} */}
+          </Route>
+          {/**
+           * ? Leave this as NOT an exact path so I can gray it out in CSS?
+           *  */}
+          <Route path="/details/:id">
+            <Details
+              selectedExpenses={selectedExpenses}
+              selectedSales={selectedSales}
+            />
+          </Route>
+          <Route path="/details/:id/form">
+            <Form setToggleFetch={setToggleFetch} />
+          </Route>
+        </div>
+      </body>
     </div>
   );
 }

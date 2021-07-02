@@ -5,9 +5,6 @@
   --darksienna: #2D0005;
 }
 
-.App {
-  position: relative;
-}
 
 /* HEADER FOR BUSINESS NAME AND PROFILE PIC */
 header {
@@ -23,37 +20,41 @@ header {
 
 h3 {
   color: var(--apricot);
-  display: inline-block;
+  /* display: inline-block; */
   box-sizing: border-box;
   margin: 0;
 }
 
 /* DIV SOUP OH YEAH */
+body {
+  position: relative;
+}
+
 #nav-div {
   /* *** ROTATE! *** */
   transform: rotate(90deg);
   transform-origin: top left;
   width: 100vh;
-  position: fixed;
+  position: absolute fixed;
   top: 0;
   margin-left: 99%;
 }
 
 #batchmenu-div {
-
-}
-
-#main-div {
-  position: absolute;
-}
-
-/* *** BATCH MENU *** */
-#batch-menu {
   text-align: right;
   margin-top: 20px;
   margin-right: 10%;
 }
 
+#main-div {
+  position: absolute;
+  margin: 20px;
+  padding: 10px;
+  width: 90vw;
+  height: 90vh;
+}
+
+/* *** BATCH MENU *** */
 #dropdown {
   font-size: 18px;
   padding: 5px;
@@ -115,10 +116,6 @@ main {
     "T D"
     "T C";
   gap: 10px;
-  margin: 20px;
-  padding: 10px;
-  width: 90vw;
-  height: 90vh;
 }
 
 /* ! TABLE */
