@@ -199,7 +199,7 @@ Expenses Airtable Sample
 | BatchMenu Component       |    H     |       1hr      |      hr      |     1hr     |
 | Table Component           |    H     |    1.5hrs      |    hr      |    .75hr     |
 | Render Results            |    H     |      3hrs      |      .5hr      |    .5hr     |
-| Calculations Component    |    H     |      2hrs      |    hr      |    3.5hrs     |
+| Calculations Component    |    H     |      2hrs      |    hr      |    3hrs     |
 | DonutChart Component      |    M     |      3hrs      |    .5hr      |     .5hr     |
 | Sales/Expenses Component  |    H     |      2hrs      |   .5hrs      |    1.8hrs     |
 | Summary Component         |    H     |    1.5hrs      |    hrs      |    .5hrs     |
@@ -208,9 +208,9 @@ Expenses Airtable Sample
 | Form Component            |    H     |       1hr      |      mins     |     2.1hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    1hr     |
 | CategoryDropdown Component|    M     |      2hrs      |      hr      |     .1hr     |
-| Media Query               |    H     |      3hrs      |      hr      |     hr     |
+| Media Query               |    H     |      3hrs      |      .5hr      |     hr     |
 | Debugging                 |    H     |      3hrs      |      min     |     15min     |
-| MVP Total                 |    H     |     37hrs      |    hrs      |   15.6hrs     |
+| MVP Total                 |    H     |     37hrs      |    hrs      |   15.1hrs     |
 | Combo Chart               |    M     |      3hrs      |     hrs      |    hrs     |
 | Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
 | API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |
@@ -218,8 +218,8 @@ Expenses Airtable Sample
 | Adjust Components for PUT/DELETE| M  |      2hrs      |      hr      |     hr     |
 | Filter Table              |    L     |      2hrs      |     hrs      |    hrs     |
 | Add Additional Batches    |    L     |      3hrs      |     hrs      |    hrs     |
-| Render Components by Batch|    L     |      2hrs      |     hrs      |    hrs     |
-| PMVP Total                |    L     |     16hrs      |     hrs      |    hrs     |
+| Render Components by Batch|    L     |      2hrs      |     hrs      |    .5hrs     |
+| PMVP Total                |    L     |     16hrs      |     hrs      |    .5hrs     |
 
 ## SWOT Analysis
 

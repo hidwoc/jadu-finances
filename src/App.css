@@ -205,22 +205,34 @@ table tr:hover {background-color: #ddd;}
     position: fixed;
   }
 
+  #batchmenu-div {
+    width: 100vw;
+    position: fixed;
+    margin-top: 40px;
+  }
+  #dropdown {
+    margin-right: 40px;
+  }
+
   #nav-div {
     transform: none;
     width: 100vw;
     position: fixed;
-    top: 100px;
+    top: 90px;
     margin-left: 0;
+    border-top: 5px solid var(--tabColor);
   }
-
-  #batchmenu-div {
-    position: fixed;
+  .nav-tab {
+    padding: 10px;
+    width: 200px;
   }
+  
 
   #main-div {
-    margin-top: 150px;
+    margin-top: 160px;
     padding: 10px;
     width: 90vw;
     height: 90vh;
   }
+
 }
