@@ -14,7 +14,7 @@ function App() {
   const [expensesData, setExpensesData] = useState([]);
   const [salesData, setSalesData] = useState([]);
   // select batch via BatchMenu
-  const [selectedBatch, setSelectedBatch] = useState("MAY");
+  const [selectedBatch, setSelectedBatch] = useState("Select Batch to View");
   // filteredData by selectedBatch
   const [selectedSales, setSelectedSales] = useState([]);
   const [selectedExpenses, setSelectedExpenses] = useState([]);
@@ -56,7 +56,7 @@ function App() {
       <header>
         <h3>JADU FINANCES</h3>
       </header>
-      <body>
+      <div id="body-div">
         <div id="nav-div">
           <Nav />
         </div>
@@ -75,7 +75,7 @@ function App() {
           {/**
            * ? Leave this as NOT an exact path so I can gray it out in CSS?
            *  */}
-          <Route path="/details/:id">
+          <Route exact path="/details/:id">
             <Details
               selectedExpenses={selectedExpenses}
               selectedSales={selectedSales}
@@ -85,7 +85,7 @@ function App() {
             <Form setToggleFetch={setToggleFetch} />
           </Route>
         </div>
-      </body>
+      </div>
     </div>
   );
 }

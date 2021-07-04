@@ -41,7 +41,7 @@ const Details = (props) => {
         />
       </div>
       <div id="calculations-container">
-        {viewingCalculations.calculations
+        {/* {viewingCalculations.calculations
           .filter((category) => category.className.includes(params.id))
           .map((category) => (
             <Calculation
@@ -58,7 +58,7 @@ const Details = (props) => {
               name={category.name}
               sum={category.sum}
             />
-          ))}
+          ))} */}
       </div>
     </main>
   );

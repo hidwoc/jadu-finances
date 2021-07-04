@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import axios from "axios";
 import { baseURLExpenses, baseURLSales, config } from "../services";
-/**
- * TODO: handle display none required inputs
- */
+
 const Form = (props) => {
   const [className, setClassName] = useState("");
   const [batch, setBatch] = useState("");
@@ -18,6 +16,7 @@ const Form = (props) => {
   const [quantitySold, setQuantitySold] = useState(0);
   const [vendor, setVendor] = useState("");
   const params = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     setClassName(params.id)
@@ -64,22 +63,29 @@ const Form = (props) => {
     props.setToggleFetch((curr) => !curr);
   };
 
+  const exitForm = () => {
+    history.push(`/details/${params.id}`)
+  }
+
   // toggle visibility of salesOnly and expensesOnly inputs
   const expensesOnly = className === "expenses" ? null : { display: "none" };
   const salesOnly = className === "sales" ? null : { display: "none" };
 
   return (
-    <div>
+    <div id="form-div">
+      <button id="exit-form" onClick={exitForm}>X</button>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="batch">Batch</label>
-        <input
-          id="batch"
-          type="text"
-          required
-          value={batch}
-          onChange={(e) => setBatch(e.target.value.toUpperCase())}
-        />
-        <div className={className} style={expensesOnly}>
+        <div className="input-div">
+          <label htmlFor="batch">Batch</label>
+          <input
+            id="batch"
+            type="text"
+            required
+            value={batch}
+            onChange={(e) => setBatch(e.target.value.toUpperCase())}
+          />
+        </div>
+        <div className="input-div {className}" style={expensesOnly}>
           <label htmlFor="description">Description</label>
           <input
             id="description"
@@ -90,7 +96,7 @@ const Form = (props) => {
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
-        <div className={className} style={salesOnly}>
+        <div className="input-div {className}" style={salesOnly}>
           <label htmlFor="customer">Customer</label>
           <input
             id="customer"
@@ -101,17 +107,18 @@ const Form = (props) => {
             onChange={(e) => setCustomer(e.target.value)}
           />
         </div>
-        <div className={className} style={expensesOnly}>
+        <div className="input-div {className}" style={expensesOnly}>
           <label htmlFor="quantity">Quantity</label>
           <input
             id="quantity"
             type="text"
             autoComplete="off"
+            placeholder="optional"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
           />
         </div>
-        <div className={className} style={salesOnly}>
+        <div className="input-div {className}" style={salesOnly}>
           <label htmlFor="quantitySold">Quantity</label>
           <input
             id="quantitySold"
@@ -121,38 +128,42 @@ const Form = (props) => {
             onChange={(e) => setQuantitySold(e.target.valueAsNumber)}
           />
         </div>
-        <label htmlFor="category">Category</label>
-        <select
-          id="category"
-          type="text"
-          required
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option disabled>Select Category</option>
-          <option value="Kimchi">Kimchi</option>
-          <option value="Jalapenos">Jalapenos</option>
-          <option value="Beans">Beans</option>
-          <option className={className} style={expensesOnly} value="Supplies">
-            Supplies
-          </option>
-          <option className={className} style={expensesOnly} value="Packaging">
-            Packaging
-          </option>
-          <option className={className} style={expensesOnly} value="Delivery">
-            Delivery
-          </option>
-        </select>
-        <label htmlFor="price">Price</label>
-        <input
-          id="price"
-          type="number"
-          required
-          autoComplete="off"
-          value={price}
-          onChange={(e) => setPrice(e.target.valueAsNumber)}
-        />
-        <div className={className} style={salesOnly}>
+        <div className="input-div">
+          <label htmlFor="category">Category</label>
+          <select
+            id="category"
+            type="text"
+            required
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option disabled>Select Category</option>
+            <option value="Kimchi">Kimchi</option>
+            <option value="Jalapenos">Jalapenos</option>
+            <option value="Beans">Beans</option>
+            <option className={className} style={expensesOnly} value="Supplies">
+              Supplies
+            </option>
+            <option className={className} style={expensesOnly} value="Packaging">
+              Packaging
+            </option>
+            <option className={className} style={expensesOnly} value="Delivery">
+              Delivery
+            </option>
+          </select>
+        </div>
+        <div className="input-div">
+          <label htmlFor="price">Price</label>
+          <input
+            id="price"
+            type="number"
+            required
+            autoComplete="off"
+            value={price}
+            onChange={(e) => setPrice(e.target.valueAsNumber)}
+          />
+        </div>
+        <div className="input-div {className}" style={salesOnly}>
           <label htmlFor="chargedDeliveryFee">Charged Delivery Fee?</label>
           <input
             id="chargedDeliveryFee"
@@ -161,7 +172,7 @@ const Form = (props) => {
             onChange={(e) => e.target.checked ? setChargedDeliveryFee("true") : setChargedDeliveryFee("false")}
           />
         </div>
-        <div className={className} style={salesOnly}>
+        <div className="input-div {className}" style={salesOnly}>
           <label htmlFor="jarDiscount">Jar Discount</label>
           <input
             id="jarDiscount"
@@ -171,17 +182,18 @@ const Form = (props) => {
             onChange={(e) => setJarDiscount(e.target.valueAsNumber)}
           />  
         </div>
-        <div className={className} style={expensesOnly}>
+        <div className="input-div {className}" style={expensesOnly}>
           <label htmlFor="vendor">Vendor</label>
           <input
             id="vendor"
             type="text"
             autoComplete="off"
+            placeholder="optional"
             value={vendor}
             onChange={(e) => setVendor(e.target.value)}
           />
         </div>
-        <button type="submit">Add Entry</button>
+        <button id="submit" type="submit">Add Entry</button>
       </form>
     </div>
   );

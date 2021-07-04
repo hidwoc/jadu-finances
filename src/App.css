@@ -4,6 +4,7 @@
   --rosewood: #4F000B;
   --darksienna: #2D0005;
   --tabColor: #720026;
+  font-family: 'Roboto Slab', serif;
 }
 
 
@@ -25,7 +26,7 @@ h3 {
 }
 
 /* DIV SOUP OH YEAH */
-body {
+#body-div {
   position: relative;
   width: 100vw;
 }
@@ -110,7 +111,7 @@ nav a:visited {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr .75fr;
   grid-template-areas:
     "T D"
     "T C";
@@ -133,6 +134,45 @@ main {
   box-sizing: border-box;
   margin: 20px;
   padding: 10px;
+}
+
+/* FORM */
+#form-div {
+  background-color: gainsboro;
+  position: fixed;
+  width: 90vw;
+  height: 90vh;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  width: 250px;
+}
+
+input {
+  /* margin-left: 5px; */
+}
+
+.input-div select {
+  /* margin-left: 5px; */
+}
+
+#submit {
+  margin: 10px;
+}
+
+#exit-form {
+  margin: 10px;
 }
 
 /* ! TABLE */
@@ -172,6 +212,7 @@ table tr:hover {background-color: #ddd;}
 #donut-container {
   grid-area: D;
   width: 500px;
+  margin: 30px;
 }
 
 /* Calculations */
@@ -196,7 +237,7 @@ table tr:hover {background-color: #ddd;}
 } */
 
 @media only screen and (max-width: 1024px) {
-  .App body {
+  #body-div {
     display: flex;
     flex-direction: column;
   }
