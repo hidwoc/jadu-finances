@@ -24,6 +24,7 @@ const Details = (props) => {
     setViewingCalculations(new Calculations(viewingEntries));
   }, [selectedSales, selectedExpenses, viewingEntries, params.id]);
 
+  console.log(viewingCalculations.calculations);
   return (
     <main>
       <div id="entries">
@@ -40,55 +41,24 @@ const Details = (props) => {
         />
       </div>
       <div id="calculations-container">
-        <Calculation
-          className={className}
-          category="Total Sales"
-          total={viewingCalculations.totalSales}
-        />
-        <Calculation
-          // style={expensesOnly}
-          category="Total Expenses"
-          total={viewingCalculations.totalExpenses}
-        />
-        <Calculation
-          // style={expensesOnly}
-          category="Supplies"
-          total={viewingCalculations.totalSupplies}
-        />
-        <Calculation
-          // style={expensesOnly}
-          category="Packaging"
-          total={viewingCalculations.totalPackaging}
-        />
-        <Calculation
-          // style={expensesOnly}
-          category="Delivery"
-          total={viewingCalculations.totalDelivery}
-        />
-        <Calculation
-          // style={expensesOnly}
-          category="Ingredients"
-          total={viewingCalculations.totalIngredients}
-        />
-        <Calculation
-          category="Kimchi"
-          total={viewingCalculations.totalKimchi}
-        />
-        <Calculation
-          category="Jalapenos"
-          total={viewingCalculations.totalJalapenos}
-        />
-        <Calculation category="Beans" total={viewingCalculations.totalBeans} />
-        <Calculation
-          // style={salesOnly}
-          category="Delivery Fees"
-          total={viewingCalculations.totalDeliveryFee}
-        />
-        <Calculation
-          // style={salesOnly}
-          category="Jar Discount"
-          total={viewingCalculations.totalJarDiscount}
-        />
+        {viewingCalculations.calculations
+          .filter((category) => category.className.includes(params.id))
+          .map((category) => (
+            <Calculation
+              key={category.name}
+              name={category.name}
+              sum={category.sum}
+            />
+          ))}
+        {viewingCalculations.grandTotals
+          .filter((category) => category.className.includes(params.id))
+          .map((category) => (
+            <Calculation
+              key={category.name}
+              name={category.name}
+              sum={category.sum}
+            />
+          ))}
       </div>
     </main>
   );

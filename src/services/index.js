@@ -12,78 +12,120 @@ export class Calculations {
   constructor(data) {
     this.data = data;
 
-    // ** SAME FOR EXPENSES / SALES ** //
-    this.totalKimchi = Number(
-      this.data
-        .filter((entry) => entry.fields.category === "Kimchi")
-        .reduce(this.reducer(), 0)
-        .toFixed(2)
-    );
-    this.totalJalapenos = Number(
-      this.data
-        .filter((entry) => entry.fields.category === "Jalapenos")
-        .reduce(this.reducer(), 0)
-        .toFixed(2)
-    );
+    // ** EXPENSES AND SALES [0, 1, 2] ** //
+    this.calculations = [
+      {
+        name: "Kimchi",
+        className: "expenses sales",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.category === "Kimchi")
+            .reduce(this.reducer(), 0)
+            .toFixed(2)
+        ),
+      },
+      {
+        name: "Jalapenos",
+        className: "expenses sales",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.category === "Jalapenos")
+            .reduce(this.reducer(), 0)
+            .toFixed(2)
+        ),
+      },
+      {
+        name: "Beans",
+        className: "expenses sales",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.category === "Beans")
+            .reduce(this.reducer(), 0)
+            .toFixed(2)
+        ),
+      },
+      // * SALES CALCULATIONS [3, 4] * //
+      {
+        name: "Delivery Fee",
+        className: "sales",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.chargedDeliveryFee === "true")
+            .reduce((accumulator) => accumulator + 4, 0)
+            .toFixed(2)
+        ),
+      },
+      {
+        name: "Jar Discount",
+        className: "sales",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.jarDiscount)
+            .reduce(
+              (accumulator, entry) => accumulator + entry.fields.jarDiscount,
+              0
+            )
+            .toFixed(2)
+        ),
+      },
+      // * EXPENSES CALCULATIONS [5, 6, 7] * //
+      {
+        name: "Packaging",
+        className: "expenses",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.category === "Packaging")
+            .reduce(this.reducer(), 0)
+            .toFixed(2)
+        ),
+      },
+      {
+        name: "Supplies",
+        className: "expenses",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.category === "Supplies")
+            .reduce(this.reducer(), 0)
+            .toFixed(2)
+        ),
+      },
+      {
+        name: "Delivery",
+        className: "expenses",
+        sum: Number(
+          this.data
+            .filter((entry) => entry.fields.category === "Delivery")
+            .reduce(this.reducer(), 0)
+            .toFixed(2)
+        ),
+      },
+    ];
 
-    this.totalBeans = Number(
-      this.data
-        .filter((entry) => entry.fields.category === "Beans")
-        .reduce(this.reducer(), 0)
-        .toFixed(2)
-    );
-
-    // * SALES CALCULATIONS * //
-    this.totalDeliveryFee = Number(
-      this.data
-        .filter((entry) => entry.fields.chargedDeliveryFee === "true")
-        .reduce((accumulator) => accumulator + 4, 0)
-        .toFixed(2)
-    );
-
-    this.totalJarDiscount = Number(
-      this.data
-        .filter((entry) => entry.fields.jarDiscount)
-        .reduce(
-          (accumulator, entry) => accumulator + entry.fields.jarDiscount,
-          0
-        )
-        .toFixed(2)
-    );
-
-    this.totalSales =
-      this.totalKimchi +
-      this.totalJalapenos +
-      this.totalBeans +
-      this.totalDeliveryFee -
-      this.totalJarDiscount;
-
-    // * EXPENSES CALCULATIONS * //
-    this.totalExpenses = Number(this.data.reduce(this.reducer(), 0).toFixed(2));
-
-    this.totalIngredients =
-      this.totalKimchi + this.totalBeans + this.totalJalapenos;
-
-    this.totalPackaging = Number(
-      this.data
-        .filter((entry) => entry.fields.category === "Packaging")
-        .reduce(this.reducer(), 0)
-        .toFixed(2)
-    );
-
-    this.totalSupplies = Number(
-      this.data
-        .filter((entry) => entry.fields.category === "Supplies")
-        .reduce(this.reducer(), 0)
-        .toFixed(2)
-    );
-
-    this.totalDelivery = Number(
-      this.data
-        .filter((entry) => entry.fields.category === "Delivery")
-        .reduce(this.reducer(), 0)
-        .toFixed(2)
-    );
+    this.grandTotals = [
+      {
+        name: "Total Sales",
+        className: "sales",
+        sum:
+          this.calculations[0].sum +
+          this.calculations[1].sum +
+          this.calculations[2].sum +
+          this.calculations[3].sum -
+          this.calculations[4].sum,
+      },
+      {
+        name: "Total Expenses",
+        className: "expenses",
+        sum: Number(this.data.reduce(this.reducer(), 0).toFixed(2)),
+      },
+      {
+        name: "Total Ingredients",
+        className: "expenses",
+        sum:
+          this.calculations[0].sum +
+          this.calculations[1].sum +
+          this.calculations[2].sum,
+      },
+    ];
 
     // ** DONUT OBJECTS ** //
     this.donutSales = {
@@ -92,10 +134,10 @@ export class Calculations {
         {
           label: "Total Category Sales",
           data: [
-            this.totalKimchi,
-            this.totalJalapenos,
-            this.totalBeans,
-            this.totalDeliveryFee,
+            this.calculations[0].sum,
+            this.calculations[1].sum,
+            this.calculations[2].sum,
+            this.calculations[3].sum,
           ],
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
@@ -120,23 +162,23 @@ export class Calculations {
 
     this.donutExpenses = {
       labels: [
-        "Packaging",
-        "Supplies",
-        "Delivery",
         "Kimchi",
         "Jalapenos",
         "Beans",
+        "Packaging",
+        "Supplies",
+        "Delivery",
       ],
       datasets: [
         {
           label: "Total Category Expenses",
           data: [
-            this.totalPackaging,
-            this.totalSupplies,
-            this.totalDelivery,
-            this.totalKimchi,
-            this.totalJalapenos,
-            this.totalBeans,
+            this.calculations[0].sum,
+            this.calculations[1].sum,
+            this.calculations[2].sum,
+            this.calculations[5].sum,
+            this.calculations[6].sum,
+            this.calculations[7].sum,
           ],
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",

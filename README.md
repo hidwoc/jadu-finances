@@ -182,7 +182,7 @@ Expenses Airtable Sample
 | Jun 29 | Proposal Approval, Airtable Setup, Donut Chart Setup         | Complete    |
 | Jun 30 | Link/Route Skeleton, Component Creation, Successful API GET  | Complete |
 | Jul 1  | Render Components, Successful API POST                       | Complete |
-| Jul 2  | Deploy, CSS, Media Query                                     | Not Started |
+| Jul 2  | Deploy, CSS, Media Query                                     | In progress |
 | Jul 6  | Advanced CSS (Transitions, onHover effects), Combo Chart     | Not Started |
 | Jul 7  | Presentations                                                | Not Started |
 
@@ -198,19 +198,19 @@ Expenses Airtable Sample
 | Nav Component             |    H     |       2hr      |   hrs      |  .15hrs     |
 | BatchMenu Component       |    H     |       1hr      |      hr      |     1hr     |
 | Table Component           |    H     |    1.5hrs      |    hr      |    .75hr     |
-| Render Results            |    H     |      3hrs      |      hr      |    .5hr     |
-| Calculations Component    |    H     |      2hrs      |     hr      |    3.5hrs     |
-| DonutChart Component      |    M     |      3hrs      |    hr      |     .5hr     |
-| Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    1.8hrs     |
+| Render Results            |    H     |      3hrs      |      .5hr      |    .5hr     |
+| Calculations Component    |    H     |      2hrs      |    hr      |    3.5hrs     |
+| DonutChart Component      |    M     |      3hrs      |    .5hr      |     .5hr     |
+| Sales/Expenses Component  |    H     |      2hrs      |   .5hrs      |    1.8hrs     |
 | Summary Component         |    H     |    1.5hrs      |    hrs      |    .5hrs     |
-| Basic CSS                 |    H     |      3hrs      |     hrs      |    1.5hrs     |
+| Basic CSS                 |    H     |      3hrs      |     45min      |    1.5hrs     |
 | ToForm Component          |    H     |      .5hr      |      min      |     .5hr     |
 | Form Component            |    H     |       1hr      |      mins     |     2.1hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    1hr     |
-| CategoryDropdown Component|    M     |      2hrs      |      hr      |     hr     |
+| CategoryDropdown Component|    M     |      2hrs      |      hr      |     .1hr     |
 | Media Query               |    H     |      3hrs      |      hr      |     hr     |
-| Debugging                 |    H     |      3hrs      |      min     |     hr     |
-| MVP Total                 |    H     |     37hrs      |    hrs      |   15.5hrs     |
+| Debugging                 |    H     |      3hrs      |      min     |     15min     |
+| MVP Total                 |    H     |     37hrs      |    hrs      |   15.6hrs     |
 | Combo Chart               |    M     |      3hrs      |     hrs      |    hrs     |
 | Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
 | API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |

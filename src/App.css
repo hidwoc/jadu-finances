@@ -3,6 +3,7 @@
   --claret: #720026;
   --rosewood: #4F000B;
   --darksienna: #2D0005;
+  --tabColor: #720026;
 }
 
 
@@ -36,14 +37,14 @@ body {
   width: 90vh;
   position: fixed;
   top: 90px;
-  border-top: 20px solid var(--claret);
+  border-top: 20px solid var(--tabColor);
   margin-left: 100%;
 }
 
 #batchmenu-div {
   text-align: right;
   padding: 10px 120px 10px 0;
-  background-color: var(--claret)
+  background-color: var(--tabColor);
 }
 
 #main-div {
@@ -141,9 +142,8 @@ fixed position, scroll inside */
 table {
   display: inline-block;
   box-sizing: border-box;
-  border: 1px solid black;
   border-collapse: collapse;
-  width: 620px;
+  max-width: 620px;
   max-height: 700px;
   overflow: scroll;
   justify-content: center;
@@ -155,35 +155,45 @@ table td, table th {
   text-align: center;
 }
 
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--tabColor);
+  color: white;
+}
+
 table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
 table tr:hover {background-color: #ddd;}
 
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
 /* Doughtnut */
 #donut-container {
   grid-area: D;
+  width: 500px;
 }
 
 /* Calculations */
 #calculations-container {
   grid-area: C;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 } 
 
-/* NET INCOME */
-#big-calculation {
-
+.calculation {
+  margin: 0;
+  text-align: center;
 }
+/* 
+.name {
+}
+.sum {
+} */
+
+/* NET INCOME */
+/* #big-calculation {
+} */
 
 @media only screen and (max-width: 1024px) {
   .App body {
