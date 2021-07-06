@@ -15,10 +15,14 @@ header {
   box-sizing: border-box;
   width: 100vw;
   height: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
   margin: 0;
   padding: 10px;
   align-items: center;
   border-bottom: 1px black solid;
+  background-color: white;
 }
 
 h3 {
@@ -45,6 +49,9 @@ h3 {
 }
 
 #batchmenu-div {
+  position: sticky;
+  top: 40px;
+  z-index: 40;
   text-align: right;
   padding: 10px 120px 10px 0;
   background-color: var(--tabColor);
@@ -150,96 +157,6 @@ main {
   font-size: 2em;
 }
 
-form {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 75vw;
-}
-
-.input-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 10px;
-  width: 600px;
-}
-
-input {
-  width: 300px;
-}
-
-.input-div select {
-  width: 250px;
-}
-
-#chargedDeliveryFee {
-  transform: scale(1.5);
-}
-
-#submit {
-  margin: 30px;
-  padding: 10px;
-  font-size: 24px;
-}
-
-#exit-form {
-  font-size: 18px;
-  margin: 10px;
-  padding: 10px auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* ! TABLE */
-/* remove display block, give table header styling, border, every other row shaded
-fixed position, scroll inside */
-/* basic table CSS from https://www.w3schools.com/css/css_table.asp */
-table {
-  display: inline-block;
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-spacing: 0;
-  max-width: 620px;
-  max-height: 800px;
-  overflow-y: scroll;
-  justify-content: center;
-}
-
-/* freeze row CSS from: https://blogs.perficient.com/2021/01/18/freezing-row-and-column-in-html-table-using-css/ */
-thead th {
-  top:0;
-  position: sticky;
-  z-index: 20;
-}
-
-table td, table th {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: center;
-}
-
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: var(--tabColor);
-  color: white;
-}
-
-
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-table tr:hover {background-color: #ddd;}
-
-table td {
-  padding: 15px;
-}
 /* Doughtnut */
 #donut-container {
   grid-area: D;
@@ -247,74 +164,6 @@ table td {
   margin: 30px;
 }
 
-/* Calculations */
-#calculations-container {
-  grid-area: C;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  "A B C"
-  "D E F"
-  "H I J";
-} 
-
-.calculation {
-  margin: 0;
-  text-align: center;
-}
-
-.name {
-  font-size: 20px;
-}
-
-.sum {
-  font-size: 30px;
-}
-
-#Total-Sales {
-  grid-area: A;
-}
-
-#Jar-Discount {
-  grid-area: B;
-}
-
-#Delivery-Fee {
-  grid-area: C;
-}
-
-#Total-Expenses {
-  grid-area: A;
-}
-
-#Total-Ingredients {
-  grid-area: B;
-}
-
-#Kimchi {
-  grid-area: D;
-}
-
-#Jalapenos {
-  grid-area: E;
-}
-
-#Beans {
-  grid-area: F;
-}
-
-#Supplies {
-  grid-area: H;
-}
-
-#Packaging {
-  grid-area: I;
-}
-
-#Delivery {
-  grid-area: J;
-}
 /* NET INCOME */
 /* #big-calculation {
 } */
