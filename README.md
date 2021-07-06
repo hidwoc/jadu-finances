@@ -198,19 +198,19 @@ Expenses Airtable Sample
 | Nav Component             |    H     |       2hr      |   hrs      |  .15hrs     |
 | BatchMenu Component       |    H     |       1hr      |      hr      |     1hr     |
 | Table Component           |    H     |    1.5hrs      |    hr      |    .75hr     |
-| Render Results            |    H     |      3hrs      |      .5hr      |    .5hr     |
-| Calculations Component    |    H     |      2hrs      |    hr      |    3hrs     |
-| DonutChart Component      |    M     |      3hrs      |    .5hr      |     .5hr     |
-| Sales/Expenses Component  |    H     |      2hrs      |   .5hrs      |    1.8hrs     |
+| Render Results            |    H     |      3hrs      |      hr      |    1hr     |
+| Calculations Component    |    H     |      2hrs      |    hr      |    3.5hrs     |
+| DonutChart Component      |    M     |      3hrs      |    hr      |     .5hr     |
+| Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    2hrs     |
 | Summary Component         |    H     |    1.5hrs      |    hrs      |    .5hrs     |
-| Basic CSS                 |    H     |      3hrs      |     45min      |    1.5hrs     |
+| Basic CSS                 |    H     |      3hrs      |     30min      |    2hrs     |
 | ToForm Component          |    H     |      .5hr      |      min      |     .5hr     |
-| Form Component            |    H     |       1hr      |      mins     |     2.1hr     |
+| Form Component            |    H     |       1hr      |      mins     |     2.6hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    1hr     |
 | CategoryDropdown Component|    M     |      2hrs      |      hr      |     .1hr     |
-| Media Query               |    H     |      3hrs      |      .5hr      |     hr     |
-| Debugging                 |    H     |      3hrs      |      min     |     15min     |
-| MVP Total                 |    H     |     37hrs      |    hrs      |   15.1hrs     |
+| Media Query               |    H     |      3hrs      |      hr      |     1hr     |
+| Debugging                 |    H     |      3hrs      |      min     |     30min     |
+| MVP Total                 |    H     |     37hrs      |    hrs      |   18.6hrs     |
 | Combo Chart               |    M     |      3hrs      |     hrs      |    hrs     |
 | Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
 | API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |

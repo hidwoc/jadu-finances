@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* HEADER FOR BUSINESS NAME AND PROFILE PIC */
@@ -144,13 +144,19 @@ main {
   position: fixed;
   width: 90vw;
   height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
 }
 
 form {
   margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 75vw;
 }
 
 .input-div {
@@ -158,23 +164,34 @@ form {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
-  width: 250px;
+  width: 600px;
 }
 
 input {
-  /* margin-left: 5px; */
+  width: 300px;
 }
 
 .input-div select {
-  /* margin-left: 5px; */
+  width: 250px;
+}
+
+#chargedDeliveryFee {
+  transform: scale(1.5);
 }
 
 #submit {
-  margin: 10px;
+  margin: 30px;
+  padding: 10px;
+  font-size: 24px;
 }
 
 #exit-form {
+  font-size: 18px;
   margin: 10px;
+  padding: 10px auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* ! TABLE */
@@ -184,11 +201,20 @@ fixed position, scroll inside */
 table {
   display: inline-block;
   box-sizing: border-box;
+  border: 1px solid black;
   border-collapse: collapse;
+  border-spacing: 0;
   max-width: 620px;
-  max-height: 700px;
-  overflow: scroll;
+  max-height: 800px;
+  overflow-y: scroll;
   justify-content: center;
+}
+
+/* freeze row CSS from: https://blogs.perficient.com/2021/01/18/freezing-row-and-column-in-html-table-using-css/ */
+thead th {
+  top:0;
+  position: sticky;
+  z-index: 20;
 }
 
 table td, table th {
@@ -204,12 +230,16 @@ table th {
   color: white;
 }
 
+
 table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
 table tr:hover {background-color: #ddd;}
 
+table td {
+  padding: 15px;
+}
 /* Doughtnut */
 #donut-container {
   grid-area: D;
