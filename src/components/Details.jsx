@@ -41,24 +41,32 @@ const Details = (props) => {
         />
       </div>
       <div id="calculations-container">
-        {viewingCalculations.calculations
-          .filter((category) => category.className.includes(params.id))
-          .map((category) => (
-            <Calculation
-              key={category.name}
-              name={category.name}
-              sum={category.sum}
-            />
-          ))}
-        {viewingCalculations.grandTotals
-          .filter((category) => category.className.includes(params.id))
-          .map((category) => (
-            <Calculation
-              key={category.name}
-              name={category.name}
-              sum={category.sum}
-            />
-          ))}
+        {!viewingCalculations.calculations ? (
+          <h4>Loading...</h4>
+        ) : (
+          viewingCalculations.calculations
+            .filter((category) => category.className.includes(params.id))
+            .map((category) => (
+              <Calculation
+                key={category.name}
+                name={category.name}
+                sum={category.sum}
+              />
+            ))
+        )}
+        {!viewingCalculations.calculations ? (
+          <h4>Loading...</h4>
+        ) : (
+          viewingCalculations.grandTotals
+            .filter((category) => category.className.includes(params.id))
+            .map((category) => (
+              <Calculation
+                key={category.name}
+                name={category.name}
+                sum={category.sum}
+              />
+            ))
+        )}
       </div>
     </main>
   );

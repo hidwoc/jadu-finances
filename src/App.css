@@ -4,9 +4,11 @@
   --rosewood: #4F000B;
   --darksienna: #2D0005;
   --tabColor: #720026;
-  font-family: 'Roboto Slab', serif;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 /* HEADER FOR BUSINESS NAME AND PROFILE PIC */
 header {
