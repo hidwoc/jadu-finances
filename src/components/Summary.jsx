@@ -10,9 +10,9 @@ const Summary = (props) => {
      */
     <main>
       <div id="calculations-container">
-        <Calculation category={`${selectedBatch} Expenses`} total={totalExpenses} />
+        {/* <Calculation category={`${selectedBatch} Expenses`} total={totalExpenses} />
         <Calculation category={`${selectedBatch} Sales`} total={totalSales} />
-        <Calculation id="big-calculation" category={`${selectedBatch} Net Income`} total={totalSales - totalExpenses} />
+        <Calculation id="big-calculation" category={`${selectedBatch} Net Income`} total={totalSales - totalExpenses} /> */}
         {/* <Calculation category={`${selectedBatch} Expenses`} total={totalExpenses} />
         <Calculation category={`${selectedBatch} Expenses`} total={totalExpenses} />
         <Calculation category={`${selectedBatch} Expenses`} total={totalExpenses} /> */}

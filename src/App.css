@@ -1,13 +1,18 @@
 :root {
-  --apricot: #FFD5B8;
+  --apricot: #ffd5b8;
   --claret: #720026;
-  --rosewood: #4F000B;
-  --darksienna: #2D0005;
+  --rosewood: #4f000b;
+  --darksienna: #2d0005;
   --tabColor: #720026;
+  --sales: #ffd5b8;
+  --expenses: #720026;
+  --summary: #2d0005;
+  --tab-scale: 2;
+  --tab-width: 16px * var(--tab-scale);
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 /* HEADER FOR BUSINESS NAME AND PROFILE PIC */
@@ -42,10 +47,12 @@ h3 {
   transform: rotate(90deg);
   transform-origin: top left;
   width: 90vh;
+  height: 60px;
   position: fixed;
   top: 90px;
   border-top: 20px solid var(--tabColor);
   margin-left: 100%;
+  align-items: center;
 }
 
 #batchmenu-div {
@@ -79,20 +86,73 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-end;
+  right: 10px;
 }
 
 nav a {
   text-decoration: none;
+  text-decoration-color: none;
 }
 
 nav a:visited {
   color: black;
 }
 
-.nav-tab {
+/* tabs using input(type="radio") and styling from: https://codepen.io/tari/pen/mVdLXy/?editors=1111 */
+.tabs {
+  height: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+nav label {
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+  position: absolute;
+  right: 0;
+  width: var(--tab-width);
+  height: 33%;
+  outline: var(--tab-width) / 2 solid;
+  outline-offset: -var(--tab-width) / 2;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  appearance: none;
+  cursor: crosshair;
+}
+
+label[for="summary"] {
+  background-color: var(--summary);
+  outline-color: var(--summary);
+  top: 0%;
+}
+
+label[for="sales"] {
+  background-color: var(--sales);
+  outline-color: var(--sales);
+  top: 33%;
+}
+
+label[for="expenses"] {
+  background-color: var(--expenses);
+  outline-color: var(--expenses);
+  top: 66%;
+}
+/* input[type="radio"]:checked main {
+  transform: translateX(0%);
+	transition: transform 0.4s ease 0.4s;
+} */
+
+/* .nav-tab {
   box-sizing: border-box;
   margin: 0;
   border: 1px solid black;
+  border-radius: 10px;
   padding: 20px;
   width: 200px;
   text-align: center;
@@ -114,13 +174,13 @@ nav a:visited {
   padding: 20px;
   width: 200px;
   text-align: center;
-}
+} */
 
 /* *** DETAILS *** */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr .5fr;
+  grid-template-rows: 1fr 0.5fr;
   grid-template-areas:
     "T D"
     "T C";
@@ -164,16 +224,12 @@ main {
   margin: 30px;
 }
 
-/* NET INCOME */
-/* #big-calculation {
-} */
-
 @media only screen and (max-width: 1024px) {
   #body-div {
     display: flex;
     flex-direction: column;
   }
-  
+
   header {
     position: fixed;
   }
@@ -199,7 +255,6 @@ main {
     padding: 10px;
     width: 200px;
   }
-  
 
   #main-div {
     margin-top: 160px;
@@ -207,5 +262,4 @@ main {
     width: 90vw;
     height: 90vh;
   }
-
 }

@@ -25,6 +25,7 @@
 
 #Total-Sales {
   grid-area: A;
+  font-weight: bold;
 }
 
 #Jar-Discount {
@@ -33,10 +34,12 @@
 
 #Delivery-Fee {
   grid-area: C;
+  font-style: italic;
 }
 
 #Total-Expenses {
   grid-area: A;
+  font-weight: bold;
 }
 
 #Total-Ingredients {
@@ -45,24 +48,34 @@
 
 #Kimchi {
   grid-area: D;
+  font-style: italic;
 }
 
 #Jalapenos {
   grid-area: E;
+  font-style: italic;
 }
 
 #Beans {
   grid-area: F;
+  font-style: italic;
 }
 
 #Supplies {
   grid-area: H;
+  font-style: italic;
 }
 
 #Packaging {
   grid-area: I;
+  font-style: italic;
 }
 
 #Delivery {
   grid-area: J;
+  font-style: italic;
 }
+
+/* NET INCOME */
+/* #big-calculation {
+} */
