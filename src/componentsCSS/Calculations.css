@@ -1,0 +1,68 @@
+/* Calculations */
+#calculations-container {
+  grid-area: C;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "A B C"
+  "D E F"
+  "H I J";
+} 
+
+.calculation {
+  margin: 0;
+  text-align: center;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.sum {
+  font-size: 30px;
+}
+
+#Total-Sales {
+  grid-area: A;
+}
+
+#Jar-Discount {
+  grid-area: B;
+}
+
+#Delivery-Fee {
+  grid-area: C;
+}
+
+#Total-Expenses {
+  grid-area: A;
+}
+
+#Total-Ingredients {
+  grid-area: B;
+}
+
+#Kimchi {
+  grid-area: D;
+}
+
+#Jalapenos {
+  grid-area: E;
+}
+
+#Beans {
+  grid-area: F;
+}
+
+#Supplies {
+  grid-area: H;
+}
+
+#Packaging {
+  grid-area: I;
+}
+
+#Delivery {
+  grid-area: J;
+}

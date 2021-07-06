@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
 import axios from "axios";
 import { baseURLExpenses, baseURLSales, config } from "../services";
+import "../componentsCSS/Form.css";
 
 const Form = (props) => {
   const [className, setClassName] = useState("");

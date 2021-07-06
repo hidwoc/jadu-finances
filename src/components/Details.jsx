@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
+import "../componentsCSS/Calculations.css"
 import Table from "./Table";
 import ToForm from "./ToForm";
 import { Calculations } from "../services";

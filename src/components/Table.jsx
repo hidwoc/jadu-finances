@@ -1,3 +1,5 @@
+import "../componentsCSS/Table.css";
+
 const Table = (props) => {
   const { viewingEntries, className } = props;
 

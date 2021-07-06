@@ -1,0 +1,43 @@
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  width: 600px;
+}
+
+input {
+  width: 300px;
+}
+
+.input-div select {
+  width: 250px;
+}
+
+#chargedDeliveryFee {
+  transform: scale(1.5);
+}
+
+#submit {
+  margin: 30px;
+  padding: 10px;
+  font-size: 24px;
+}
+
+#exit-form {
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

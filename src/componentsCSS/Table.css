@@ -1,0 +1,46 @@
+/* ! TABLE */
+/* remove display block, give table header styling, border, every other row shaded
+fixed position, scroll inside */
+/* basic table CSS from https://www.w3schools.com/css/css_table.asp */
+table {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 620px;
+  max-height: 800px;
+  overflow-y: scroll;
+  justify-content: center;
+}
+
+/* freeze row CSS from: https://blogs.perficient.com/2021/01/18/freezing-row-and-column-in-html-table-using-css/ */
+thead th {
+  top:0;
+  position: sticky;
+  z-index: 20;
+}
+
+table td, table th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--tabColor);
+  color: white;
+}
+
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {background-color: #ddd;}
+
+table td {
+  padding: 15px;
+}
