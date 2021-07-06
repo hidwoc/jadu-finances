@@ -5,7 +5,7 @@ import BatchMenu from "./components/BatchMenu";
 import Details from "./components/Details";
 import Form from "./components/Form";
 import Nav from "./components/Nav";
-import Summary from "./components/Summary";
+// import Summary from "./components/Summary";
 import { baseURLSales, baseURLExpenses, config } from "./services";
 import "./App.css";
 
@@ -70,7 +70,7 @@ function App() {
         </div>
         <div id="main-div">
           <Route exact path="/">
-            <Summary /> {/*  totalsObject={totalsObject} */}
+            {/* <Summary />  totalsObject={totalsObject} */}
           </Route>
           {/**
            * ? Leave this as NOT an exact path so I can gray it out in CSS?
