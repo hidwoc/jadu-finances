@@ -46,6 +46,8 @@ table td {
 
 @media only screen and (max-width: 1024px) {
   table {
+    min-width: 320px;
+    width: 90vw;
     max-width: 375px;
     max-height: 575px;
     overflow-x: scroll;

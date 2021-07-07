@@ -41,3 +41,21 @@ input {
   top: 0;
   left: 0;
 }
+
+@media only screen and (max-width: 1024px) {
+  .input-div {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    width: 250px;
+  }
+  #chargedDeliveryFee {
+    transform: scale(1);
+  }
+  #submit {
+    font-size: 15px;
+    margin: 5px;
+  }
+}
