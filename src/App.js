@@ -89,9 +89,6 @@ function App() {
             </article>
             {/* <Summary />  totalsObject={totalsObject} */}
           </Route>
-          {/**
-           * ? Leave this as NOT an exact path so I can gray it out in CSS?
-           *  */}
           <Route exact path="/details/:id">
             <Details
               selectedExpenses={selectedExpenses}

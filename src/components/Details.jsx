@@ -25,12 +25,15 @@ const Details = (props) => {
     setViewingCalculations(new Calculations(viewingEntries));
   }, [selectedSales, selectedExpenses, viewingEntries, params.id]);
 
-  // console.log(viewingEntries);
   return (
     <main>
       <div id="entries">
         <ToForm details={params.id} />
-        <Table className={className} viewingEntries={viewingEntries} styleColor={styleColor} />
+        <Table
+          className={className}
+          viewingEntries={viewingEntries}
+          styleColor={styleColor}
+        />
       </div>
       <div id="donut-container">
         <Doughnut

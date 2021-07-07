@@ -70,8 +70,6 @@ h3 {
 }
 
 /* *** NAV *** */
-/* FIXED, ABSOLUTE, ON SIDE LIKE TABS
-MEDIA QUERY: TABS ACROSS TOP */
 nav {
   box-sizing: border-box;
   right: 10px;
@@ -206,7 +204,6 @@ main {
   #batchmenu-div {
     width: 100vw;
     position: fixed;
-    /* margin-top: 40px; */
   }
   #dropdown {
     margin-right: 40px;

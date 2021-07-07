@@ -7,7 +7,7 @@ const Table = (props) => {
     <div>
       {/* research on creating tables on w3schools */}
       <table>
-        <thead style={{backgroundColor: styleColor}}>
+        <thead style={{ backgroundColor: styleColor }}>
           <tr>
             <th className={className}>
               {className === "expenses" ? "Description" : "Customer"}
@@ -18,7 +18,10 @@ const Table = (props) => {
             <th className={className}>
               {className === "expenses" ? "Vendor" : "Charged Delivery Fee?"}
             </th>
-            <th className={className} style={className === "expenses"? {display: "none"} : null}>
+            <th
+              className={className}
+              style={className === "expenses" ? { display: "none" } : null}
+            >
               {className === "expenses" ? null : "Jar Discount"}
             </th>
           </tr>
@@ -39,7 +42,10 @@ const Table = (props) => {
                   ? entry.fields.vendor
                   : entry.fields.chargedDeliveryFee}
               </td>
-              <td className={className} style={className === "expenses"? {display: "none"} : null}>
+              <td
+                className={className}
+                style={className === "expenses" ? { display: "none" } : null}
+              >
                 {className === "expenses"
                   ? null
                   : entry.fields.jarDiscount
@@ -47,7 +53,7 @@ const Table = (props) => {
                   : null}
               </td>
             </tr>
-         ))}
+          ))}
         </tbody>
       </table>
     </div>

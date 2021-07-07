@@ -126,10 +126,12 @@ export class Calculations {
           this.calculations[2].sum,
       },
     ];
+    
     this.netIncome = {
       name: "Net Income",
       sum: this.grandTotals[0] - this.grandTotals[1],
-    }
+    };
+
     // ** DONUT OBJECTS ** //
     this.donutSales = {
       labels: ["Kimchi", "Jalapenos", "Beans", "Delivery Fee"],
