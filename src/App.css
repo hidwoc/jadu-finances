@@ -179,6 +179,8 @@ main {
   }
   #dropdown {
     margin-right: 40px;
+    width: 100px;
+    font-size: 15px;
   }
 
   #nav-div {
@@ -189,10 +191,16 @@ main {
     margin-left: 0;
     border-top: 5px solid;
   }
-  /* .nav-tab {
-    padding: 10px;
-    width: 200px;
-  } */
+
+  .tabrow li {
+    padding: 0 5px;
+    min-width: 70px;
+    max-width: 100px;
+  }
+  
+  .tabrow h5 {
+    font-size: 15px;
+  }
 
   #main-div {
     margin-top: 170px;
@@ -210,6 +218,7 @@ main {
 
   #donut-container {
     order: -1;
+    max-width: 450px;
   }
 
   #calculations-container {
