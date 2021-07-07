@@ -18,8 +18,10 @@ function App() {
   // filteredData by selectedBatch
   const [selectedSales, setSelectedSales] = useState([]);
   const [selectedExpenses, setSelectedExpenses] = useState([]);
+  // change colors based on tab selection
   const [colorTheme, setColorTheme] = useState("summary");
-  const [styleColor, setStyleColor] = useState("#FFD5B8");
+  const [styleColor, setStyleColor] = useState("#FF9B54");
+
   const [toggleFetch, setToggleFetch] = useState(false);
 
   // get unique Keys from BatchMenu
@@ -54,11 +56,11 @@ function App() {
 
   useEffect(() => {
     if (colorTheme === "sales") {
-      setStyleColor("#78B064")
+      setStyleColor("#317D44")
     } else if (colorTheme === "expenses") {
-      setStyleColor("#720026")
+      setStyleColor("#7D1E1D")
     } else {
-      setStyleColor("#FFD5B8")
+      setStyleColor("#FF9B54")
     }
   }, [colorTheme])
 
@@ -69,7 +71,7 @@ function App() {
       </header>
       <div id="body-div">
         <div id="nav-div" style={{borderTopColor: styleColor}}>
-          <Nav setColorTheme={setColorTheme}/>
+          <Nav colorTheme={colorTheme} setColorTheme={setColorTheme} styleColor={styleColor} />
         </div>
         <div id="batchmenu-div" style={{backgroundColor: styleColor}}>
           <BatchMenu

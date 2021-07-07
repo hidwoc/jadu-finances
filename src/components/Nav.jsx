@@ -1,31 +1,73 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Nav = (props) => {
-  const { setColorTheme } = props;
+  const { colorTheme, setColorTheme, styleColor } = props;
+  const [selectedFont, setSelectedFont] = useState("black");
+
+  useEffect(() => {
+    if (colorTheme === "summary") {
+      setSelectedFont("black");
+    } else {
+      setSelectedFont("white");
+    }
+  }, [colorTheme]);
 
   const handleClick = (e) => {
-    setColorTheme(e.target.id)
-  }
+    setColorTheme(e.target.id);
+  };
 
   return (
-    <nav>
+    <ul className="tabrow">
       <Link to="/">
-        {/* <label htmlFor="summary" onClick={() => console.log("summary!")}>Summary</label>
-        <input type="radio" className="tabs" id="summary" name="nav" value="Summary" /> */}
-        <h2 className="nav-tab" id="summary" onClick={handleClick}>Summary</h2>
+        <li
+          className=""
+          style={
+            colorTheme === "summary" ? { backgroundColor: styleColor } : null
+          }
+        >
+          <h5
+            id="summary"
+            onClick={handleClick}
+            style={colorTheme === "summary" ? { color: selectedFont } : null}
+          >
+            Summary
+          </h5>
+        </li>
       </Link>
       <Link to="/details/sales">
-        {/* <label htmlFor="sales">Sales</label>
-        <input type="radio" className="tabs" id="sales" name="nav" value="Sales" /> */}
-        <h2 className="nav-tab" id="sales" onClick={handleClick}>Sales</h2>
+        <li
+          className=""
+          style={
+            colorTheme === "sales" ? { backgroundColor: styleColor } : null
+          }
+        >
+          <h5
+            id="sales"
+            onClick={handleClick}
+            style={colorTheme === "sales" ? { color: selectedFont } : null}
+          >
+            Sales
+          </h5>
+        </li>
       </Link>
-
       <Link to="/details/expenses">
-        {/* <label htmlFor="expenses">Expenses</label>
-        <input type="radio" className="tabs" id="expenses" name="nav" value="Expenses" /> */}
-        <h2 className="nav-tab" id="expenses" onClick={handleClick}>Expenses</h2>
+        <li
+          className=""
+          style={
+            colorTheme === "expenses" ? { backgroundColor: styleColor } : null
+          }
+        >
+          <h5
+            id="expenses"
+            onClick={handleClick}
+            style={colorTheme === "expenses" ? { color: selectedFont } : null}
+          >
+            Expenses
+          </h5>
+        </li>
       </Link>
-    </nav>
+    </ul>
   );
 };
 
