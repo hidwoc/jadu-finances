@@ -14,15 +14,16 @@ function App() {
   const [expensesData, setExpensesData] = useState([]);
   const [salesData, setSalesData] = useState([]);
   // select batch via BatchMenu
-  const [selectedBatch, setSelectedBatch] = useState("Select Batch to View");
+  const [selectedBatch, setSelectedBatch] = useState("MAY");
   // filteredData by selectedBatch
   const [selectedSales, setSelectedSales] = useState([]);
   const [selectedExpenses, setSelectedExpenses] = useState([]);
+  const [colorTheme, setColorTheme] = useState("summary");
+  const [styleColor, setStyleColor] = useState("#FFD5B8");
   const [toggleFetch, setToggleFetch] = useState(false);
 
   // get unique Keys from BatchMenu
   // const [keys, setKeys] = useState([]);
-  // let totalsObject = {};
 
   useEffect(() => {
     const fetchExpensesData = async () => {
@@ -51,16 +52,26 @@ function App() {
     );
   }, [selectedBatch, salesData, expensesData]);
 
+  useEffect(() => {
+    if (colorTheme === "sales") {
+      setStyleColor("#78B064")
+    } else if (colorTheme === "expenses") {
+      setStyleColor("#720026")
+    } else {
+      setStyleColor("#FFD5B8")
+    }
+  }, [colorTheme])
+
   return (
     <div className="App">
       <header>
         <h3>JADU FINANCES</h3>
       </header>
       <div id="body-div">
-        <div id="nav-div">
-          <Nav />
+        <div id="nav-div" style={{borderTopColor: styleColor}}>
+          <Nav setColorTheme={setColorTheme}/>
         </div>
-        <div id="batchmenu-div">
+        <div id="batchmenu-div" style={{backgroundColor: styleColor}}>
           <BatchMenu
             salesData={salesData}
             expensesData={expensesData}
@@ -70,6 +81,10 @@ function App() {
         </div>
         <div id="main-div">
           <Route exact path="/">
+            <article>
+              <h2>Welcome Home!</h2>
+              <p>Select which batch you'd like to learn more about using the Batch Menu above. Use the Sales and Expenses tabs to view details for your selected batch.</p>
+            </article>
             {/* <Summary />  totalsObject={totalsObject} */}
           </Route>
           {/**
@@ -79,6 +94,7 @@ function App() {
             <Details
               selectedExpenses={selectedExpenses}
               selectedSales={selectedSales}
+              styleColor={styleColor}
             />
           </Route>
           <Route path="/details/:id/form">

@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Doughnut } from "react-chartjs-2";
 import Calculation from "./Calculation";
-import "../componentsCSS/Calculations.css"
+import "../componentsCSS/Calculations.css";
 import Table from "./Table";
 import ToForm from "./ToForm";
 import { Calculations } from "../services";
 
 const Details = (props) => {
-  const { selectedExpenses, selectedSales } = props;
+  const { selectedExpenses, selectedSales, styleColor } = props;
   const [className, setClassName] = useState("");
   const [viewingEntries, setViewingEntries] = useState([]);
   const [viewingCalculations, setViewingCalculations] = useState({});
@@ -25,12 +25,12 @@ const Details = (props) => {
     setViewingCalculations(new Calculations(viewingEntries));
   }, [selectedSales, selectedExpenses, viewingEntries, params.id]);
 
-  console.log(viewingCalculations.calculations);
+  console.log(viewingEntries);
   return (
     <main>
       <div id="entries">
         <ToForm details={params.id} />
-        <Table className={className} viewingEntries={viewingEntries} />
+        <Table className={className} viewingEntries={viewingEntries} styleColor={styleColor} />
       </div>
       <div id="donut-container">
         <Doughnut

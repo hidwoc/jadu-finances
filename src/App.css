@@ -15,7 +15,7 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-/* HEADER FOR BUSINESS NAME AND PROFILE PIC */
+/* *** HEADER FOR BUSINESS NAME AND PROFILE PIC *** */
 header {
   box-sizing: border-box;
   width: 100vw;
@@ -36,21 +36,21 @@ h3 {
   margin: 0;
 }
 
-/* DIV SOUP OH YEAH */
+/* *** DIV SOUP OH YEAH *** */
 #body-div {
   position: relative;
   width: 100vw;
 }
 
 #nav-div {
-  /* *** ROTATE! *** */
+  /* ** ROTATE! ** */
   transform: rotate(90deg);
   transform-origin: top left;
   width: 90vh;
   height: 60px;
   position: fixed;
   top: 90px;
-  border-top: 20px solid var(--tabColor);
+  border-top: 20px solid;
   margin-left: 100%;
   align-items: center;
 }
@@ -61,7 +61,6 @@ h3 {
   z-index: 40;
   text-align: right;
   padding: 10px 120px 10px 0;
-  background-color: var(--tabColor);
 }
 
 #main-div {
@@ -193,7 +192,7 @@ main {
   grid-area: T;
 }
 
-/* TO FORM BUTTON */
+/* *** TO FORM BUTTON *** */
 #add-entry {
   text-align: center;
 }
@@ -205,19 +204,20 @@ main {
   padding: 10px;
 }
 
-/* FORM */
+/* *** FORM *** */
 #form-div {
   background-color: gainsboro;
   position: fixed;
   width: 90vw;
   height: 90vh;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2em;
 }
 
-/* Doughtnut */
+/* *** Doughtnut *** */
 #donut-container {
   grid-area: D;
   width: 500px;

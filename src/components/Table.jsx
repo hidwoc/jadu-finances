@@ -1,13 +1,13 @@
 import "../componentsCSS/Table.css";
 
 const Table = (props) => {
-  const { viewingEntries, className } = props;
+  const { viewingEntries, className, styleColor } = props;
 
   return (
     <div>
       {/* research on creating tables on w3schools */}
       <table>
-        <thead>
+        <thead style={{backgroundColor: styleColor}}>
           <tr>
             <th className={className}>
               {className === "expenses" ? "Description" : "Customer"}

@@ -195,7 +195,7 @@ Expenses Airtable Sample
 | Donut Chart Research      |    H     |       2hr      |    hrs      |    .5hr     |
 | Link/Route Skeleton       |    H     |       1hr      |   hrs      |  .25hrs     |
 | API GET Request           |    H     |       1hr      |    hr      |   .15hr     |
-| Nav Component             |    H     |       2hr      |   hrs      |  .15hrs     |
+| Nav Component             |    H     |       2hr      |   1hrs      |  .15hrs     |
 | BatchMenu Component       |    H     |       1hr      |      hr      |     1hr     |
 | Table Component           |    H     |    1.5hrs      |    hr      |    .75hr     |
 | Render Results            |    H     |      3hrs      |      hr      |    1hr     |
@@ -203,9 +203,9 @@ Expenses Airtable Sample
 | DonutChart Component      |    M     |      3hrs      |    hr      |     .5hr     |
 | Sales/Expenses Component  |    H     |      2hrs      |   hrs      |    2hrs     |
 | Summary Component         |    H     |    1.5hrs      |    hrs      |    .5hrs     |
-| Basic CSS                 |    H     |      3hrs      |     30min      |    2hrs     |
+| Basic CSS                 |    H     |      3hrs      |    1.5hr      |    2hrs     |
 | ToForm Component          |    H     |      .5hr      |      min      |     .5hr     |
-| Form Component            |    H     |       1hr      |      mins     |     2.6hr     |
+| Form Component            |    H     |       1hr      |    20mins     |     2.6hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    1hr     |
 | CategoryDropdown Component|    M     |      2hrs      |      hr      |     .1hr     |
 | Media Query               |    H     |      3hrs      |      hr      |     1hr     |
@@ -217,7 +217,7 @@ Expenses Airtable Sample
 | API DELETE Request        |    M     |     .5hrs      |     hrs      |    hrs     |
 | Adjust Components for PUT/DELETE| M  |      2hrs      |      hr      |     hr     |
 | Filter Table              |    L     |      2hrs      |     hrs      |    hrs     |
-| Add Additional Batches    |    L     |      3hrs      |     hrs      |    hrs     |
+| Add Additional Batches    |    L     |      3hrs      |     15mins      |    hrs     |
 | Render Components by Batch|    L     |      2hrs      |     hrs      |    .5hrs     |
 | PMVP Total                |    L     |     16hrs      |     hrs      |    .5hrs     |
 
