@@ -113,6 +113,11 @@ nav {
   font-weight: bold;
 }
 
+article {
+  margin: 20px;
+  padding-top: 10px;
+}
+
 /* *** DETAILS *** */
 main {
   display: grid;
