@@ -15,7 +15,7 @@ table {
 }
 
 /* freeze row CSS from: https://blogs.perficient.com/2021/01/18/freezing-row-and-column-in-html-table-using-css/ */
-thead th {
+thead {
   top:0;
   position: sticky;
   z-index: 20;

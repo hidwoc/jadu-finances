@@ -78,78 +78,6 @@ nav {
   right: 10px;
 }
 
-nav a {
-  text-decoration: none;
-  text-decoration-color: none;
-}
-
-nav a:visited {
-  color: black;
-}
-
-/* tabs using input(type="radio") and styling from: https://codepen.io/tari/pen/mVdLXy/?editors=1111 */
-/* .tabs {
-  height: 100vw;
-  position: relative;
-  overflow: hidden;
-}
-
-nav label {
-  margin: 5px;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-input[type="radio"] {
-  position: absolute;
-  right: 0;
-  width: var(--tab-width);
-  height: 33%;
-  outline: var(--tab-width) / 2 solid;
-  outline-offset: -var(--tab-width) / 2;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  appearance: none;
-  cursor: crosshair;
-}
-
-label[for="summary"] {
-  background-color: var(--summary);
-  outline-color: var(--summary);
-  top: 0%;
-}
-
-label[for="sales"] {
-  background-color: var(--sales);
-  outline-color: var(--sales);
-  top: 33%;
-}
-
-label[for="expenses"] {
-  background-color: var(--expenses);
-  outline-color: var(--expenses);
-  top: 66%;
-} */
-/* input[type="radio"]:checked main {
-  transform: translateX(0%);
-	transition: transform 0.4s ease 0.4s;
-} */
-
-/* .nav-tab {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-}
-
-.nav-tab h2 {
-  margin: 0 10px;
-  padding: 0 10px;
-  border: 1px solid #AAA;
-} */
 /* realistic tab CSS from: https://css-tricks.com/better-tabs-with-round-out-borders/  */
 .tabrow {
   display: flex;
@@ -184,52 +112,6 @@ label[for="expenses"] {
   margin: 9px;
   font-size: 25px;
   font-weight: bold;
-}
-
-.tabrow li.selected {
-  background: green;
-  color: #333;
-  z-index: 2;
-}
-
-.tabrow:before {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-top: 1px solid #AAA;
-  z-index: 1;
-}
-
-.tabrow li:before,
-.tabrow li:after {
-  border: 1px solid #AAA;
-  position: absolute;
-  top: -1px;
-  width: 6px;
-  height: 6px;
-}
-
-.tabrow li:before {
-  left: -7px;
-  border-top-right-radius: 6px;
-  border-width: 1px 1px 0px 0px;
-  box-shadow: 2px 0px 0 #ECECEC;
-}
-
-.tabrow li:after {
-  right: -7px;
-  border-top-left-radius: 6px;
-  border-width: 1px 0px 0px 1px;
-  box-shadow: -2px 0px 0 #ECECEC;
-}
-
-.tabrow li.selected:before {
-  box-shadow: 2px 0px 0 #FFF;
-}
-
-.tabrow li.selected:after {
-  box-shadow: -2px 0px 0 #FFF;
 }
 
 /* *** DETAILS *** */
@@ -316,7 +198,22 @@ main {
   #main-div {
     margin-top: 160px;
     padding: 10px;
-    width: 90vw;
+    width: 100vw;
     height: 90vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #donut-container {
+    order: -1;
+  }
+
+  #calculations-container {
+    order: -1;
   }
 }
