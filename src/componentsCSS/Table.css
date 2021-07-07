@@ -43,3 +43,11 @@ table tr:hover {background-color: #ddd;}
 table td {
   padding: 15px;
 }
+
+@media only screen and (max-width: 1024px) {
+  table {
+    max-width: 375px;
+    max-height: 575px;
+    overflow-x: scroll;
+  }
+}
