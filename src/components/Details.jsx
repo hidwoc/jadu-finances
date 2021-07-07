@@ -25,7 +25,7 @@ const Details = (props) => {
     setViewingCalculations(new Calculations(viewingEntries));
   }, [selectedSales, selectedExpenses, viewingEntries, params.id]);
 
-  console.log(viewingEntries);
+  // console.log(viewingEntries);
   return (
     <main>
       <div id="entries">
