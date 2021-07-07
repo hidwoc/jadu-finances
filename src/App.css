@@ -167,7 +167,33 @@ main {
   margin: 30px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1065px) {
+  #main-div {
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding: 10px;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #donut-container {
+    order: -1;
+    max-width: 350px;
+  }
+
+  #calculations-container {
+    order: -1;
+  }
+}
+
+@media only screen and (max-width: 650px) {
   #body-div {
     display: flex;
     flex-direction: column;
@@ -205,30 +231,6 @@ main {
   
   .tabrow h5 {
     font-size: 15px;
-  }
-
-  #main-div {
-    margin-top: 100px;
-    margin-bottom: 0;
-    padding: 10px;
-    width: 100vw;
-    height: 90vh;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #donut-container {
-    order: -1;
-    max-width: 350px;
-  }
-
-  #calculations-container {
-    order: -1;
   }
 
   #form-div {
