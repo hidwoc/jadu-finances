@@ -208,11 +208,11 @@ Expenses Airtable Sample
 | Form Component            |    H     |       1hr      |    20mins     |     2.6hr     |
 | API POST Request          |    H     |       1hr      |     hrs      |    1hr     |
 | CategoryDropdown Component|    M     |      2hrs      |      hr      |     .1hr     |
-| Media Query               |    H     |      3hrs      |      hr      |     1hr     |
-| Debugging                 |    H     |      3hrs      |      min     |     30min     |
+| Media Query               |    H     |      3hrs      |      30min      |     1hr     |
+| Debugging                 |    H     |      3hrs      |      15min     |     30min     |
 | MVP Total                 |    H     |     37hrs      |    hrs      |   18.6hrs     |
 | Combo Chart               |    M     |      3hrs      |     hrs      |    hrs     |
-| Advanced CSS              |    L     |      3hrs      |     hrs      |    hrs     |
+| Advanced CSS              |    L     |      3hrs      |     2hrs      |    hrs     |
 | API PUT Request           |    M     |     .5hrs      |     hrs      |    hrs     |
 | API DELETE Request        |    M     |     .5hrs      |     hrs      |    hrs     |
 | Adjust Components for PUT/DELETE| M  |      2hrs      |      hr      |     hr     |
